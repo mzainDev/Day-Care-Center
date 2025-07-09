@@ -20,7 +20,7 @@ const Footer = () => {
                             className="bg-white p-2 rounded-md"
                         />
                         <p className="text-gray-300 text-sm leading-relaxed">
-                            Playground offers comprehensive childcare management solutions that simplify operations
+                            Rawdhat offers comprehensive childcare management solutions that simplify operations
                             and enhance the experience for families and teachers alike.
                         </p>
                         <div className="flex space-x-4">
@@ -85,7 +85,7 @@ const Footer = () => {
 
                 {/* Bottom Bar */}
                 <div className="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-                    <p>© {new Date().getFullYear()} Playground Software. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Rawdhat Software. All rights reserved.</p>
                     <div className="flex space-x-6 mt-4 md:mt-0">
                         <Link href="#" className="hover:text-white transition">Privacy Policy</Link>
                         <Link href="#" className="hover:text-white transition">Terms of Service</Link>

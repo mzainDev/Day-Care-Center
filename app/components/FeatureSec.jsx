@@ -1,38 +1,40 @@
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
+import { DollarSign, ClipboardList, MessageCircle, Users, FileText, BarChart2 } from 'lucide-react';
+
 
 const FeatureSec = () => {
     const features = [
         {
             title: "Streamlined Billing",
             description: "Automatically generate invoices, process payments, and track expenses all in one place.",
-            icon: "💰",
+            icon: <DollarSign className="w-8 h-8 text-[#d46c23]" />,
         },
         {
             title: "Attendance Tracking",
             description: "Digital check-in/out system with reporting to monitor attendance patterns and staff ratios.",
-            icon: "📋",
+            icon: <ClipboardList className="w-8 h-8 text-[#d46c23]" />,
         },
         {
             title: "Parent Communication",
             description: "Real-time updates, newsletters, and direct messaging to keep families informed.",
-            icon: "💬",
+            icon: <MessageCircle className="w-8 h-8 text-[#d46c23]" />,
         },
         {
             title: "Staff Management",
             description: "Schedule staff, track certifications, and manage payroll efficiently.",
-            icon: "👥",
+            icon: <Users className="w-8 h-8 text-[#d46c23]" />,
         },
         {
             title: "Documentation",
             description: "Digitize all your paperwork and access important documents anytime, anywhere.",
-            icon: "📄",
+            icon: <FileText className="w-8 h-8 text-[#d46c23]" />,
         },
         {
             title: "Reporting & Analytics",
             description: "Generate insights on enrollment, revenue, staff performance and more.",
-            icon: "📊",
+            icon: <BarChart2 className="w-8 h-8 text-[#d46c23]" />,
         },
     ];
     return (
@@ -52,7 +54,7 @@ const FeatureSec = () => {
                                 key={index}
                                 className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition"
                             >
-                                <div className="text-3xl mb-4">{feature.icon}</div>
+                                <div className="mb-4">{feature.icon}</div>
                                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                                 <p className="text-gray-600">{feature.description}</p>
                             </div>
