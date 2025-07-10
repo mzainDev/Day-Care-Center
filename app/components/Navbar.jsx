@@ -48,7 +48,8 @@ export default function Navbar() {
                                 </div>
                             </div>
                         </div>
-                        <Link href="#" className="hover:text-blue-600 py-2">Why Playground</Link>
+                        {/* <Link href="#" className="hover:text-blue-600 py-2">Why Playground</Link> */}
+                        <Link href="/features" className="hover:text-blue-600 py-2">Features</Link>
                         <div className="group relative">
                             <button className="flex items-center gap-1 hover:text-blue-600 py-2">
                                 Customers <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
