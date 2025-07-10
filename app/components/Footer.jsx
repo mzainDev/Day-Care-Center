@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="space-y-6">
                         <Image
                             src="/logos/logo.png"
-                            alt="Playground Logo"
+                            alt="Rawdhat Logo"
                             width={160}
                             height={50}
                             className="bg-white p-2 rounded-md"

@@ -24,7 +24,7 @@ const Hero = () => {
 
                     {/* Subheading */}
                     <p className="text-[#0f2c4f]/80 text-lg md:text-xl mb-8 max-w-3xl">
-                        Playground is child care management software that manages
+                    Rawdhat is child care management software that manages
                     </p>
 
                     {/* Feature Pills */}

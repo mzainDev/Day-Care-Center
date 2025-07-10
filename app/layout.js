@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Playground - Child Care Management Software",
-  description: "Playground offers comprehensive childcare management solutions that simplify operations and enhance the experience for families and teachers alike.",
+  title: "Rawdhat - Child Care Management Software",
+  description: "Rawdhat offers comprehensive childcare management solutions that simplify operations and enhance the experience for families and teachers alike.",
   icons: {
     icon: '/favicon.ico',
   },

@@ -62,7 +62,7 @@ const FeatureSec = () => {
                     </div>
                 </div>
             </section>
-            
+
             {/* Why it's built for Saudi Arabia */}
             <section className="py-20 px-6 bg-gray-50">
                 <div className="max-w-6xl mx-auto text-center">

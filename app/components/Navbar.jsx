@@ -48,7 +48,7 @@ export default function Navbar() {
                                 </div>
                             </div>
                         </div>
-                        {/* <Link href="#" className="hover:text-blue-600 py-2">Why Playground</Link> */}
+                        {/* <Link href="#" className="hover:text-blue-600 py-2">Why Rawdhat</Link> */}
                         <Link href="/features" className="hover:text-blue-600 py-2">Features</Link>
                         <Link href="/contact" className="hover:text-blue-600 py-2">Contact Us</Link>
                         <Link href="/registercenter" className="hover:text-blue-600 py-2">Register Your Center</Link>
@@ -98,7 +98,7 @@ export default function Navbar() {
                                     Solutions <ChevronDown className="w-4 h-4" />
                                 </button>
                             </div>
-                            <Link href="#" className="py-2 font-medium text-[#0f2c4f]">Why Playground</Link>
+                            <Link href="#" className="py-2 font-medium text-[#0f2c4f]">Why Rawdhat</Link>
                             <div className="border-b pb-2">
                                 <button className="flex items-center justify-between w-full py-2 font-medium text-[#0f2c4f]">
                                     Customers <ChevronDown className="w-4 h-4" />
