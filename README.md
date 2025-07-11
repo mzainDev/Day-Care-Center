@@ -1,3 +1,9 @@
+
+
+Rawdhat Nursery Management System
+
+Rawdhat is a dynamic solution that provides easy access for staff, parents, and students anytime, anywhere to the system's variant features such as daily operations and activity monitoring, while keeping all resources and information in one place. The system efficiently manages families data and operations, students, subscriptions, registration, and admissions, enabling quick access to important information such as schedules, grades, and attendance records and other
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
