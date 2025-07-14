@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -195,7 +195,7 @@ const FeaturePreview = () => {
               </div>
 
               <div className="lg:w-1/2 relative h-[500px] bg-white overflow-hidden">
-                <Image
+                <ExportedImage
                   src="/ss/Monthly Attendance.JPG"
                   alt="Rawdhat Attendance Dashboard"
                   fill
@@ -238,7 +238,7 @@ const FeaturePreview = () => {
                   </div>
                   <p className="text-[#64748b] mb-6">{feature.description}</p>
                   <div className="mt-auto relative w-full h-full min-h-[200px] overflow-hidden">
-                    <Image
+                    <ExportedImage
                       src={feature.image}
                       alt={`Rawdhat ${feature.title}`}
                       fill

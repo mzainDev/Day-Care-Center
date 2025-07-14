@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { ArrowRight, DollarSign, CalendarCheck, ClipboardList, MessageSquare, FileText, CreditCard } from 'lucide-react';
 
 const Hero = () => {
@@ -24,7 +24,7 @@ const Hero = () => {
 
                     {/* Subheading */}
                     <p className="text-[#0f2c4f]/80 text-lg md:text-xl mb-8 max-w-3xl">
-                    Rawdhat is child care management software that manages
+                        Rawdhat is child care management software that manages
                     </p>
 
                     {/* Feature Pills */}
@@ -64,7 +64,7 @@ const Hero = () => {
                     <div className="relative w-full max-w-5xl mx-auto">
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-500 rounded-xl blur-sm opacity-20 transform translate-y-2"></div>
                         <div className="relative bg-white p-2 sm:p-4 rounded-xl shadow-xl border border-gray-100 overflow-hidden">
-                            <Image
+                            <ExportedImage
                                 src="/logos/ss.png"
                                 alt="Screenshot of Playground Software"
                                 width={1200}
