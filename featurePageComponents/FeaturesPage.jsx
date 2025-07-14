@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import ExportedImage from "next-export-optimize-images";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
 
@@ -110,9 +110,9 @@ const FeaturesPage = () => {
                 className="absolute inset-0"
               >
                 <div className="relative w-full h-[400px] md:h-[500px] lg:h-[550px]">
-                  <Image 
-                    src={dashboardSlides[activeSlide].src} 
-                    alt={dashboardSlides[activeSlide].alt} 
+                  <ExportedImage
+                    src={dashboardSlides[activeSlide].src}
+                    alt={dashboardSlides[activeSlide].alt}
                     fill
                     className="object-contain"
                     priority

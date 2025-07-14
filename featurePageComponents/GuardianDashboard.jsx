@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import ExportedImage from 'next-export-optimize-images';
 import Link from 'next/link';
 
 const GuardianDashboard = () => {
@@ -9,31 +9,31 @@ const GuardianDashboard = () => {
           {/* Image - Right */}
           <div className="relative lg:w-1/2">
             <div className="overflow-hidden rounded-lg shadow-md aspect-w-16 aspect-h-9">
-              <Image 
-                src="/features/dummy.jpg" 
-                alt="Guardian Dashboard" 
-                width={550} 
-                height={400} 
+              <ExportedImage
+                src="/features/dummy.jpg"
+                alt="Guardian Dashboard"
+                width={550}
+                height={400}
                 className="object-cover w-full h-full"
               />
             </div>
             <div className="absolute -bottom-3 -right-3 w-20 h-20 bg-purple-100 rounded-lg -z-10"></div>
           </div>
-          
+
           {/* Content */}
           <div className="lg:w-1/2 lg:pr-10">
             <div className="inline-flex px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-purple-600 uppercase bg-purple-50 rounded-full">
               Parent Portal
             </div>
-            
+
             <h2 className="text-3xl font-bold text-gray-900">
               Guardian Dashboard
             </h2>
-            
+
             <p className="mt-4 text-gray-600">
               Real-time visibility into your child's well-being and development.
             </p>
-            
+
             <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2">
               {[
                 { icon: '📱', title: "Updates", desc: "Daily activity reports" },
@@ -48,16 +48,16 @@ const GuardianDashboard = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="flex gap-3 mt-8">
-              <Link 
-                href="#tour" 
+              <Link
+                href="#tour"
                 className="flex items-center px-5 py-2 text-sm font-medium text-white transition-all duration-200 bg-purple-600 rounded-lg hover:bg-purple-700"
               >
                 Take a Tour
               </Link>
-              <Link 
-                href="#testimonials" 
+              <Link
+                href="#testimonials"
                 className="px-5 py-2 text-sm font-medium text-gray-700 transition-all duration-200 border border-gray-300 rounded-lg hover:border-purple-400"
               >
                 Parent Stories

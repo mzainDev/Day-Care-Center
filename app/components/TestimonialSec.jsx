@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -135,7 +135,7 @@ export default function TestimonialSec() {
                                     </blockquote>
                                     <div className="flex items-center">
                                         <div className="relative h-14 w-14 rounded-full overflow-hidden mr-4 flex-shrink-0 border-2 border-white shadow-sm">
-                                            <Image
+                                            <ExportedImage
                                                 src={testimonial.image}
                                                 alt={`Portrait of ${testimonial.name}`}
                                                 fill
@@ -229,4 +229,6 @@ export default function TestimonialSec() {
             </div>
         </section>
     );
+
 }
+

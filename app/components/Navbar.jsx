@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { ChevronDown, Phone, ArrowRight, Menu, X } from 'lucide-react';
-import Image from 'next/image';
+import ExportedImage from "next-image-export-optimizer";
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -15,7 +15,14 @@ export default function Navbar() {
                 {/* Logo Section */}
                 <div className="flex items-center">
                     <Link href="/">
-                        <Image src="/logos/1.png" alt="Logo" width={160} height={100} />
+                        <ExportedImage
+                            src="/logos/1.png"
+                            alt="Logo"
+                            width={160}
+                            height={100}
+                            priority
+                            quality={100}
+                        />
                     </Link>
                 </div>
 
@@ -35,7 +42,7 @@ export default function Navbar() {
                 <div className="hidden md:flex items-center justify-between w-full pl-10">
                     {/* Navigation Links */}
                     <div className="flex space-x-8 text-[#0f2c4f] font-medium">
-                        <div className="group relative">
+                        {/* <div className="group relative">
                             <button className="flex items-center gap-1 hover:text-blue-600 py-2">
                                 Solutions <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                             </button>
@@ -47,12 +54,12 @@ export default function Navbar() {
                                     <Link href="#" className="block px-3 py-2 hover:bg-blue-50 rounded-md">Communication</Link>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* <Link href="#" className="hover:text-blue-600 py-2">Why Rawdhat</Link> */}
                         <Link href="/features" className="hover:text-blue-600 py-2">Features</Link>
                         <Link href="/contact" className="hover:text-blue-600 py-2">Contact Us</Link>
                         <Link href="/registercenter" className="hover:text-blue-600 py-2">Register Your Center</Link>
-                        <div className="group relative">
+                        {/* <div className="group relative">
                             <button className="flex items-center gap-1 hover:text-blue-600 py-2">
                                 Customers <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                             </button>
@@ -74,7 +81,7 @@ export default function Navbar() {
                                     <Link href="#" className="block px-3 py-2 hover:bg-blue-50 rounded-md">Help Center</Link>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Right Side Contact & Button */}

@@ -15,7 +15,7 @@ const RegisterCenter = () => {
             </header>
 
             {/* Form Section */}
-            <section className="py-16 px-6 bg-zinc-100 min-h-screen">
+            <section className="py-16 px-6 bg-gradient-to-r from-blue-50 to-blue-100 min-h-screen">
                 <div className="max-w-4xl mx-auto">
                     <form className="bg-white rounded-2xl shadow-xl p-10 grid gap-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

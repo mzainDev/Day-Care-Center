@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import { Instagram, Twitter, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -12,7 +12,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {/* Column 1: Logo and Description */}
                     <div className="space-y-6">
-                        <Image
+                        <ExportedImage
                             src="/logos/logo.png"
                             alt="Rawdhat Logo"
                             width={160}

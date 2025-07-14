@@ -95,7 +95,7 @@ const FeaturePreview = () => {
       ref={containerRef}
       className="relative w-full overflow-x-hidden py-32 bg-gradient-to-b from-[#f9fafb] to-[#f0f4f8]"
     >
-      {/* Parallax Background Elements */}
+      {/* Background effects */}
       <motion.div
         style={{ y: yBg }}
         className="absolute inset-0 overflow-hidden z-0"
@@ -201,6 +201,7 @@ const FeaturePreview = () => {
                   fill
                   className="object-contain p-4"
                   priority
+                  sizes="(max-width: 1024px) 100vw, 500px"
                 />
               </div>
             </div>
@@ -243,6 +244,7 @@ const FeaturePreview = () => {
                       alt={`Rawdhat ${feature.title}`}
                       fill
                       className="object-contain object-left-top transition-transform duration-500 group-hover:scale-[1.02]"
+                      sizes="(max-width: 1024px) 100vw, 400px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
                   </div>
