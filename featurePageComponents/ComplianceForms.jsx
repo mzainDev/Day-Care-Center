@@ -1,4 +1,6 @@
-import ExportedImage from 'next-export-optimize-images';
+'use client'
+
+import ExportedImage from "next-image-export-optimizer";
 import Link from 'next/link';
 
 const ComplianceForms = () => {
