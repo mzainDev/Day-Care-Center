@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import { DollarSign, ClipboardList, MessageCircle, Users, FileText, BarChart2 } from 'lucide-react';
+import TrustedConnection from './TrustedConnection';
 
 
 const FeatureSec = () => {
@@ -62,7 +63,8 @@ const FeatureSec = () => {
                     </div>
                 </div>
             </section>
-
+          {/* TrustedConnection component is included here */}
+            <TrustedConnection />
             {/* Why it's built for Saudi Arabia */}
             <section className="py-20 px-6 bg-gray-50">
                 <div className="max-w-6xl mx-auto text-center">
