@@ -102,11 +102,11 @@ const TrustedConnection = () => {
                     <div className="text-center mb-12 animate-fade-in">
                         <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
                             Seamless Integrations & Trusted Connections
-                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-indigo-600 rounded-full"></div>
                         </h2>
                         <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                             Empower your daycare with powerful tools — fully integrated, smart, and ready for growth.
                         </p>
+                        <div className="mt-2 w-24 h-1 bg-indigo-600 rounded-full mx-auto"></div>
                     </div>
 
                     <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -161,11 +161,11 @@ const TrustedConnection = () => {
                     <div className="text-center mb-12 animate-fade-in">
                         <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
                             Flexible & Secure Payment Methods
-                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-indigo-600 rounded-full"></div>
                         </h2>
                         <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                             Make daycare payments easier for families and fully compliant with local regulations.
                         </p>
+                        <div className="mt-2 w-24 h-1 bg-indigo-600 rounded-full mx-auto"></div>
                     </div>
 
                     <div className="flex flex-col-reverse lg:flex-row items-center gap-12">

@@ -14,10 +14,11 @@ export default function TopBar() {
             <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center sm:justify-between">
                 <div className="flex items-center gap-2 text-center sm:text-left mb-2 sm:mb-0">
                     <p className="text-[#0f2c4f] font-medium text-sm md:text-base">
-                        <span className="font-bold">How does a 40-location child care brand grow?</span>{' '}
-                        <span className="hidden sm:inline">Little Sunshine's shares their strategy.</span>
+                        <span className="font-bold">How do we support hundreds of families every day?</span>{' '}
+                        <span className="hidden sm:inline">Explore how our daycare centers ensure safety, learning, and love.</span>
                     </p>
                 </div>
+
                 <div className="flex items-center gap-3">
                     <button className="flex items-center gap-1.5 bg-[#d46c23] text-white font-medium px-4 py-1.5 rounded-full hover:bg-[#c25e1e] transition shadow-sm">
                         Watch Now <ArrowRight className="w-3.5 h-3.5" />
