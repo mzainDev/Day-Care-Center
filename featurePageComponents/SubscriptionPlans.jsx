@@ -1,7 +1,7 @@
 'use client'
-
 import ExportedImage from "next-image-export-optimizer";
 import Link from 'next/link';
+import { Calendar, Tag, FileText, Users } from 'lucide-react';
 
 const SubscriptionPlans = () => {
   return (
@@ -38,13 +38,13 @@ const SubscriptionPlans = () => {
 
             <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2">
               {[
-                { icon: '🗓️', title: "Flexibility", desc: "Daily/weekly/monthly" },
-                { icon: '🎫', title: "Promotions", desc: "Discounts & vouchers" },
-                { icon: '🧾', title: "Billing", desc: "Simplified tracking" },
-                { icon: '👪', title: "Families", desc: "Custom plans" }
+                { icon: <Calendar className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Flexibility", desc: "Daily/weekly/monthly" },
+                { icon: <Tag className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Promotions", desc: "Discounts & vouchers" },
+                { icon: <FileText className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Billing", desc: "Simplified tracking" },
+                { icon: <Users className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Families", desc: "Custom plans" }
               ].map((feature, index) => (
                 <div key={index} className="p-4 transition-all duration-200 bg-white border border-gray-200 rounded-lg hover:shadow-sm">
-                  <div className="text-xl mb-2">{feature.icon}</div>
+                  <div className="mb-2" style={{ color: 'rgb(92, 225, 230)' }}>{feature.icon}</div>
                   <h3 className="text-base font-semibold text-gray-900">{feature.title}</h3>
                   <p className="mt-1 text-sm text-gray-600">{feature.desc}</p>
                 </div>

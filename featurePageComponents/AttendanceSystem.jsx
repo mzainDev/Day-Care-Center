@@ -1,7 +1,7 @@
 'use client'
-
 import ExportedImage from "next-image-export-optimizer";
 import Link from 'next/link';
+import { Clock, AlertTriangle, TrendingUp, FileText } from 'lucide-react';
 
 const AttendanceSystem = () => {
   return (
@@ -38,13 +38,13 @@ const AttendanceSystem = () => {
 
             <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2">
               {[
-                { icon: '⏱️', title: "Check-ins", desc: "Instant notifications" },
-                { icon: '⚠️', title: "Alerts", desc: "Late arrivals tracking" },
-                { icon: '📈', title: "Trends", desc: "Attendance analytics" },
-                { icon: '📊', title: "Reports", desc: "Visual summaries" }
+                { icon: <Clock className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Check-ins", desc: "Instant notifications" },
+                { icon: <AlertTriangle className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Alerts", desc: "Late arrivals tracking" },
+                { icon: <TrendingUp className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Trends", desc: "Attendance analytics" },
+                { icon: <FileText className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Reports", desc: "Visual summaries" }
               ].map((feature, index) => (
                 <div key={index} className="p-4 transition-all duration-200 bg-white border border-gray-200 rounded-lg hover:shadow-sm">
-                  <div className="text-xl mb-2">{feature.icon}</div>
+                  <div className="mb-2" style={{ color: 'rgb(92, 225, 230)' }}>{feature.icon}</div>
                   <h3 className="text-base font-semibold text-gray-900">{feature.title}</h3>
                   <p className="mt-1 text-sm text-gray-600">{feature.desc}</p>
                 </div>
