@@ -12,7 +12,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12"
+          className="text-3xl md:text-4xl font-bold text-center text-[#5fe4e4] mb-12 s"
         >
           Contact Us
         </motion.h2>
@@ -56,7 +56,7 @@ export default function Contact() {
               ></textarea>
               <button
                 type="submit"
-                className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded-md transition"
+                className="w-full bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-semibold py-3 rounded-md transition"
               >
                 Send Message
               </button>

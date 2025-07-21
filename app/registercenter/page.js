@@ -6,7 +6,7 @@ const RegisterCenter = () => {
     return (
         <>
             <header className="bg-gradient-to-r from-blue-50 to-blue-100 py-20 px-6 text-center shadow-sm">
-                <h1 className="text-4xl md:text-5xl font-bold text-blue-700 mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-[#5fe4e4] mb-4">
                     Register Your Childcare Center
                 </h1>
                 <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -83,7 +83,7 @@ const RegisterCenter = () => {
 
                         <button
                             type="submit"
-                            className="w-full mt-4 bg-blue-600 text-white text-lg py-3 rounded-xl hover:bg-blue-700 transition duration-300"
+                            className="w-full mt-4 bg-[#5fe4e4] hover:bg-[#1f8282] text-white text-lg py-3 rounded-xl transition duration-300"
                         >
                             Submit for Activation
                         </button>

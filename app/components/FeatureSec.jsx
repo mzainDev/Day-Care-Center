@@ -10,32 +10,32 @@ const FeatureSec = () => {
         {
             title: "Streamlined Billing",
             description: "Automatically generate invoices, process payments, and track expenses all in one place.",
-            icon: <DollarSign className="w-8 h-8 text-[#d46c23]" />,
+            icon: <DollarSign className="w-8 h-8 text-[#5fe4e4]" />,
         },
         {
             title: "Attendance Tracking",
             description: "Digital check-in/out system with reporting to monitor attendance patterns and staff ratios.",
-            icon: <ClipboardList className="w-8 h-8 text-[#d46c23]" />,
+            icon: <ClipboardList className="w-8 h-8 text-[#5fe4e4]" />,
         },
         {
             title: "Parent Communication",
             description: "Real-time updates, newsletters, and direct messaging to keep families informed.",
-            icon: <MessageCircle className="w-8 h-8 text-[#d46c23]" />,
+            icon: <MessageCircle className="w-8 h-8 text-[#5fe4e4]" />,
         },
         {
             title: "Staff Management",
             description: "Schedule staff, track certifications, and manage payroll efficiently.",
-            icon: <Users className="w-8 h-8 text-[#d46c23]" />,
+            icon: <Users className="w-8 h-8 text-[#5fe4e4]" />,
         },
         {
             title: "Documentation",
             description: "Digitize all your paperwork and access important documents anytime, anywhere.",
-            icon: <FileText className="w-8 h-8 text-[#d46c23]" />,
+            icon: <FileText className="w-8 h-8 text-[#5fe4e4]" />,
         },
         {
             title: "Reporting & Analytics",
             description: "Generate insights on enrollment, revenue, staff performance and more.",
-            icon: <BarChart2 className="w-8 h-8 text-[#d46c23]" />,
+            icon: <BarChart2 className="w-8 h-8 text-[#5fe4e4]" />,
         },
     ];
     return (
