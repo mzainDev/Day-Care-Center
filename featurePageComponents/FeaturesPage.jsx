@@ -13,30 +13,18 @@ const FeaturesPage = () => {
     {
       src: "/admin-dashboard-section/admin-dashboard-1.JPG",
       alt: "Dashboard Overview",
-      title: "Command Center",
-      stats: ["17+ Key Metrics", "Real-time Updates", "Custom Widgets"],
-      desc: "Holistic operational visibility with key insights."
     },
     {
       src: "/admin-dashboard-section/admin-dashboard-2.JPG",
       alt: "Staff Intelligence",
-      title: "Human Capital Dashboard",
-      stats: ["Role-based Views", "Attendance Patterns", "Performance Trends"],
-      desc: "Dynamic org charts with staff management."
     },
     {
       src: "/admin-dashboard-section/admin-dashboard-3.JPG",
       alt: "Lead Ecosystem",
-      title: "Conversion Nexus",
-      stats: ["Lead Tracking", "Funnel Analytics", "Campaign Metrics"],
-      desc: "End-to-end enrollment pipeline tracking."
     },
     {
       src: "/admin-dashboard-section/admin-dashboard-4.JPG",
       alt: "Executive Insights",
-      title: "Decision Matrix",
-      stats: ["Benchmarking", "Scenario Modeling", "Risk Indicators"],
-      desc: "Boardroom-ready reports with drill-down capabilities."
     }
   ];
 
@@ -98,7 +86,7 @@ const FeaturesPage = () => {
 
         {/* Slider */}
         <div {...handlers} className="relative group" onMouseEnter={() => setAutoPlay(false)} onMouseLeave={() => setAutoPlay(true)}>
-          <div className="relative rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white min-h-[400px]">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white min-h-[500px]">
             <AnimatePresence custom={direction}>
               <motion.div
                 key={activeSlide}
@@ -109,7 +97,7 @@ const FeaturesPage = () => {
                 exit="exit"
                 className="absolute inset-0"
               >
-                <div className="relative w-full h-[400px] md:h-[500px] lg:h-[550px]">
+                <div className="relative w-full h-[600px]">
                   <ExportedImage
                     src={dashboardSlides[activeSlide].src}
                     alt={dashboardSlides[activeSlide].alt}
@@ -119,38 +107,18 @@ const FeaturesPage = () => {
                     quality={100}
                   />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-8 flex flex-col justify-end">
-                  <motion.div
-                    initial={{ y: 30, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                    className="max-w-2xl"
-                  >
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      {dashboardSlides[activeSlide].title}
-                    </h3>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {dashboardSlides[activeSlide].stats.map((stat, i) => (
-                        <span key={i} className="px-3 py-1 bg-blue-600/80 backdrop-blur text-white text-sm rounded-md">
-                          {stat}
-                        </span>
-                      ))}
-                    </div>
-                    <p className="text-blue-100 text-md">{dashboardSlides[activeSlide].desc}</p>
-                  </motion.div>
-                </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
           {/* Navigation Arrows */}
           <div className="absolute inset-0 flex items-center justify-between px-4">
-            <button onClick={prevSlide} className="z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-blue-600 hover:scale-110">
+            <button onClick={prevSlide} className="z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[rgb(92,225,230)] hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M15 19l-7-7 7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-            <button onClick={nextSlide} className="z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-blue-600 hover:scale-110">
+            <button onClick={nextSlide} className="z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[rgb(92,225,230)] hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M9 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -167,7 +135,7 @@ const FeaturesPage = () => {
                     setDirection(index > activeSlide ? 1 : -1);
                     setActiveSlide(index);
                   }}
-                  className={`w-3 h-3 rounded-full duration-300 ${activeSlide === index ? 'bg-blue-600 scale-110' : 'bg-slate-300'}`}
+                  className={`w-3 h-3 rounded-full duration-300 ${activeSlide === index ? 'bg-[rgb(92,225,230)] scale-110' : 'bg-slate-300'}`}
                 />
               ))}
             </div>
@@ -184,7 +152,7 @@ const FeaturesPage = () => {
           {[
             {
               icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[rgb(92,225,230)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               ),
@@ -193,7 +161,7 @@ const FeaturesPage = () => {
             },
             {
               icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[rgb(92,225,230)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               ),
@@ -202,7 +170,7 @@ const FeaturesPage = () => {
             },
             {
               icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[rgb(92,225,230)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               ),
@@ -211,7 +179,7 @@ const FeaturesPage = () => {
             }
           ].map((item, i) => (
             <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-              <div className="text-blue-600 mb-4">{item.icon}</div>
+              <div className="text-[rgb(92,225,230)] mb-4">{item.icon}</div>
               <h3 className="text-xl font-semibold text-slate-800 mb-2">{item.title}</h3>
               <p className="text-slate-600">{item.desc}</p>
             </div>

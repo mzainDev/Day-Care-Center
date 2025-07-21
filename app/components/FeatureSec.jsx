@@ -40,6 +40,10 @@ const FeatureSec = () => {
     ];
     return (
         <>
+            {/* TrustedConnection component is included here */}
+            <TrustedConnection />
+
+
             <section className="py-20 px-6 bg-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16">
@@ -63,8 +67,6 @@ const FeatureSec = () => {
                     </div>
                 </div>
             </section>
-          {/* TrustedConnection component is included here */}
-            <TrustedConnection />
             {/* Why it's built for Saudi Arabia */}
             <section className="py-20 px-6 bg-gray-50">
                 <div className="max-w-6xl mx-auto text-center">

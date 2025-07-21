@@ -1,66 +1,67 @@
 'use client'
-
 import ExportedImage from "next-image-export-optimizer";
 import Link from 'next/link';
+import { Clock, AlertTriangle, TrendingUp, FileText } from 'lucide-react';
 
 const AttendanceSystem = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container px-5 mx-auto max-w-7xl">
-        <div className="flex flex-col items-center gap-10 lg:flex-row">
+        <div className="flex flex-col items-center gap-14 lg:flex-row">
           {/* Image - Left */}
           <div className="relative lg:w-1/2">
-            <div className="overflow-hidden rounded-lg shadow-md aspect-w-16 aspect-h-9">
+            <div className="relative overflow-hidden rounded-3xl bg-white bg-opacity-30 backdrop-blur-md border border-green-200/50 shadow-[0_25px_80px_rgba(34,197,94,0.25)] transition-transform duration-300 hover:scale-105">
               <ExportedImage
-                src="/features/dummy.jpg"
+                src="/features/AttendanceSystem.jpg"
                 alt="Attendance System"
-                width={550}
-                height={400}
-                className="object-cover w-full h-full"
+                width={720}
+                height={500}
+                className="object-cover w-full h-auto rounded-3xl"
               />
+              <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10" />
             </div>
-            <div className="absolute -bottom-3 -left-3 w-20 h-20 bg-green-100 rounded-lg -z-10"></div>
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-green-100 rounded-xl blur-md -z-10"></div>
           </div>
 
           {/* Content */}
           <div className="lg:w-1/2 lg:pl-10">
-            <div className="inline-flex px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-green-600 uppercase bg-green-50 rounded-full">
+            <div className="inline-flex px-4 py-1.5 mb-4 text-xs font-semibold tracking-widest text-green-700 uppercase bg-green-100 rounded-full shadow-sm">
               Tracking
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-4xl font-extrabold text-gray-900 leading-tight">
               Attendance System
             </h2>
 
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-gray-600 text-lg">
               Real-time tracking and instant updates for children and staff.
             </p>
 
-            <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 mt-10 sm:grid-cols-2">
               {[
-                { icon: '⏱️', title: "Check-ins", desc: "Instant notifications" },
-                { icon: '⚠️', title: "Alerts", desc: "Late arrivals tracking" },
-                { icon: '📈', title: "Trends", desc: "Attendance analytics" },
-                { icon: '📊', title: "Reports", desc: "Visual summaries" }
+                { icon: <Clock className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Check-ins", desc: "Instant notifications" },
+                { icon: <AlertTriangle className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Alerts", desc: "Late arrivals tracking" },
+                { icon: <TrendingUp className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Trends", desc: "Attendance analytics" },
+                { icon: <FileText className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Reports", desc: "Visual summaries" }
               ].map((feature, index) => (
-                <div key={index} className="p-4 transition-all duration-200 bg-white border border-gray-200 rounded-lg hover:shadow-sm">
-                  <div className="text-xl mb-2">{feature.icon}</div>
-                  <h3 className="text-base font-semibold text-gray-900">{feature.title}</h3>
+                <div key={index} className="p-5 transition-all duration-300 bg-white border border-gray-200 rounded-xl hover:shadow-lg hover:-translate-y-1">
+                  <div className="mb-3">{feature.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
                   <p className="mt-1 text-sm text-gray-600">{feature.desc}</p>
                 </div>
               ))}
             </div>
 
-            <div className="flex gap-3 mt-8">
+            <div className="flex gap-4 mt-10">
               <Link
                 href="#attendance"
-                className="flex items-center px-5 py-2 text-sm font-medium text-white transition-all duration-200 bg-green-600 rounded-lg hover:bg-green-700"
+                className="flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-green-600 rounded-lg shadow hover:bg-green-700 transition"
               >
                 Learn More
               </Link>
               <Link
                 href="#demo"
-                className="px-5 py-2 text-sm font-medium text-gray-700 transition-all duration-200 border border-gray-300 rounded-lg hover:border-green-400"
+                className="px-6 py-2.5 text-sm font-semibold text-green-600 border border-green-300 rounded-lg bg-white hover:border-green-500 transition"
               >
                 See Demo
               </Link>

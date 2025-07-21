@@ -1,66 +1,67 @@
 'use client'
-
 import ExportedImage from "next-image-export-optimizer";
 import Link from 'next/link';
+import { Smartphone, HeartPulse, BookOpen, Bell } from 'lucide-react';
 
 const GuardianDashboard = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container px-5 mx-auto max-w-7xl">
-        <div className="flex flex-col items-center gap-10 lg:flex-row-reverse">
+        <div className="flex flex-col items-center gap-14 lg:flex-row-reverse">
           {/* Image - Right */}
           <div className="relative lg:w-1/2">
-            <div className="overflow-hidden rounded-lg shadow-md aspect-w-16 aspect-h-9">
+            <div className="relative overflow-hidden rounded-3xl bg-white bg-opacity-30 backdrop-blur-md border border-purple-200/50 shadow-[0_25px_80px_rgba(168,85,247,0.25)] transition-transform duration-300 hover:scale-105">
               <ExportedImage
-                src="/features/dummy.jpg"
+                src="/features/featurespage8.JPG"
                 alt="Guardian Dashboard"
-                width={550}
-                height={400}
-                className="object-cover w-full h-full"
+                width={720}
+                height={500}
+                className="object-cover w-full h-auto rounded-3xl"
               />
+              <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10" />
             </div>
-            <div className="absolute -bottom-3 -right-3 w-20 h-20 bg-purple-100 rounded-lg -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-purple-100 rounded-xl blur-md -z-10"></div>
           </div>
 
           {/* Content */}
           <div className="lg:w-1/2 lg:pr-10">
-            <div className="inline-flex px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-purple-600 uppercase bg-purple-50 rounded-full">
+            <div className="inline-flex px-4 py-1.5 mb-4 text-xs font-semibold tracking-widest text-purple-700 uppercase bg-purple-100 rounded-full shadow-sm">
               Parent Portal
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900">
+            <h2 className="text-4xl font-extrabold text-gray-900 leading-tight">
               Guardian Dashboard
             </h2>
 
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4 text-gray-600 text-lg">
               Real-time visibility into your child's well-being and development.
             </p>
 
-            <div className="grid grid-cols-1 gap-4 mt-8 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 mt-10 sm:grid-cols-2">
               {[
-                { icon: '📱', title: "Updates", desc: "Daily activity reports" },
-                { icon: '❤️', title: "Health", desc: "Wellness tracking" },
-                { icon: '📚', title: "Progress", desc: "Educational milestones" },
-                { icon: '🔔', title: "Alerts", desc: "Instant notifications" }
+                { icon: <Smartphone className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Updates", desc: "Daily activity reports" },
+                { icon: <HeartPulse className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Health", desc: "Wellness tracking" },
+                { icon: <BookOpen className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Progress", desc: "Educational milestones" },
+                { icon: <Bell className="w-6 h-6" style={{ color: 'rgb(92, 225, 230)' }} />, title: "Alerts", desc: "Instant notifications" }
               ].map((feature, index) => (
-                <div key={index} className="p-4 transition-all duration-200 bg-white border border-gray-200 rounded-lg hover:shadow-sm">
-                  <div className="text-xl mb-2">{feature.icon}</div>
-                  <h3 className="text-base font-semibold text-gray-900">{feature.title}</h3>
+                <div key={index} className="p-5 transition-all duration-300 bg-white border border-gray-200 rounded-xl hover:shadow-lg hover:-translate-y-1">
+                  <div className="mb-3">{feature.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
                   <p className="mt-1 text-sm text-gray-600">{feature.desc}</p>
                 </div>
               ))}
             </div>
 
-            <div className="flex gap-3 mt-8">
+            <div className="flex gap-4 mt-10">
               <Link
                 href="#tour"
-                className="flex items-center px-5 py-2 text-sm font-medium text-white transition-all duration-200 bg-purple-600 rounded-lg hover:bg-purple-700"
+                className="flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-purple-600 rounded-lg shadow hover:bg-purple-700 transition"
               >
                 Take a Tour
               </Link>
               <Link
                 href="#testimonials"
-                className="px-5 py-2 text-sm font-medium text-gray-700 transition-all duration-200 border border-gray-300 rounded-lg hover:border-purple-400"
+                className="px-6 py-2.5 text-sm font-semibold text-purple-600 border border-purple-300 rounded-lg bg-white hover:border-purple-500 transition"
               >
                 Parent Stories
               </Link>

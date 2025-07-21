@@ -11,7 +11,7 @@ const Hero = () => {
                 <div className="flex flex-col items-center text-center">
                     {/* Top Badge */}
                     <div className="inline-flex items-center space-x-1 px-4 py-1.5 rounded-full border border-pink-300 text-pink-700 bg-white text-sm font-medium mb-8 hover:bg-pink-50 cursor-pointer transition shadow-sm">
-                        <span>Arizona, Iowa, and Kansas providers have access to Playground at no cost</span>
+                        <span>A safe and educational environment for your children, guided by local professionals</span>
                         <ArrowRight className="w-4 h-4 ml-1" />
                     </div>
 
