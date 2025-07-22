@@ -86,7 +86,7 @@ const FeaturesPage = () => {
 
         {/* Slider */}
         <div {...handlers} className="relative group" onMouseEnter={() => setAutoPlay(false)} onMouseLeave={() => setAutoPlay(true)}>
-          <div className="relative rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white min-h-[500px]">
+          <div className="relative rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-white h-[300px] sm:h-[400px] md:h-[500px]">
             <AnimatePresence custom={direction}>
               <motion.div
                 key={activeSlide}
@@ -97,7 +97,7 @@ const FeaturesPage = () => {
                 exit="exit"
                 className="absolute inset-0"
               >
-                <div className="relative w-full h-[600px]">
+                <div className="relative w-full h-full">
                   <ExportedImage
                     src={dashboardSlides[activeSlide].src}
                     alt={dashboardSlides[activeSlide].alt}
@@ -113,20 +113,20 @@ const FeaturesPage = () => {
 
           {/* Navigation Arrows */}
           <div className="absolute inset-0 flex items-center justify-between px-4">
-            <button onClick={prevSlide} className="z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[rgb(92,225,230)] hover:scale-110">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button onClick={prevSlide} className="z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[rgb(92,225,230)] hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M15 19l-7-7 7-7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-            <button onClick={nextSlide} className="z-10 w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[rgb(92,225,230)] hover:scale-110">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button onClick={nextSlide} className="z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-[rgb(92,225,230)] hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M9 5l7 7-7 7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
           </div>
 
           {/* Slide Indicators */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+          <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2">
             <div className="flex space-x-2">
               {dashboardSlides.map((_, index) => (
                 <button
@@ -135,7 +135,7 @@ const FeaturesPage = () => {
                     setDirection(index > activeSlide ? 1 : -1);
                     setActiveSlide(index);
                   }}
-                  className={`w-3 h-3 rounded-full duration-300 ${activeSlide === index ? 'bg-[rgb(92,225,230)] scale-110' : 'bg-slate-300'}`}
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full duration-300 ${activeSlide === index ? 'bg-[rgb(92,225,230)] scale-110' : 'bg-slate-300'}`}
                 />
               ))}
             </div>
@@ -147,7 +147,7 @@ const FeaturesPage = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
         >
           {[
             {
