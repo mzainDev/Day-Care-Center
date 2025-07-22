@@ -55,13 +55,13 @@ const StaffManagement = () => {
             <div className="flex gap-4 mt-10">
               <Link
                 href="#demo"
-                className="flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 transition"
+                className="flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-[#5fe4e4] hover:text-[#1f8282] rounded-lg shadow hover:bg-blue-700 transition"
               >
                 Request Demo
               </Link>
               <Link
                 href="#features"
-                className="px-6 py-2.5 text-sm font-semibold text-blue-600 border border-blue-300 rounded-lg bg-white hover:border-blue-500 transition"
+                className="px-6 py-2.5 text-sm font-semibold text-white rounded-lg  bg-[#5fe4e4] hover:text-[#1f8282] transition"
               >
                 All Features
               </Link>

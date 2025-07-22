@@ -107,7 +107,7 @@ const FeatureSec = () => {
 
                     <Link
                         href="/contact"
-                        className="inline-block bg-[#d46c23] text-white font-medium px-6 py-3 rounded-full hover:bg-[#c25e1e] transition"
+                        className="inline-block bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-6 py-3 rounded-full  transition"
                     >
                         Get Started
                     </Link>

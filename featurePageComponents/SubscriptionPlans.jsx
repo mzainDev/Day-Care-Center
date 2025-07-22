@@ -55,13 +55,13 @@ const SubscriptionPlans = () => {
             <div className="flex gap-4 mt-10">
               <Link
                 href="#plans"
-                className="flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-teal-600 rounded-lg shadow hover:bg-teal-700 transition"
+                className="flex items-center px-6 py-2.5 text-sm font-semibold text-white  rounded-lg shadow bg-[#5fe4e4] hover:text-[#1f8282] transition"
               >
                 Plan Options
               </Link>
               <Link
                 href="#pricing"
-                className="px-6 py-2.5 text-sm font-semibold text-teal-600 border border-teal-300 rounded-lg bg-white hover:border-teal-500 transition"
+                className="px-6 py-2.5 text-sm font-semibold text-white rounded-lg bg-[#5fe4e4] hover:text-[#1f8282] transition"
               >
                 Pricing
               </Link>

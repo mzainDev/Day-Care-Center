@@ -1,7 +1,6 @@
 'use client';
 
 import ExportedImage from 'next-image-export-optimizer';
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
 

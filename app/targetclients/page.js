@@ -93,7 +93,7 @@ const TargetClient = () => {
 
       <div className="mt-16 text-center">
         <Link href="/register">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition">
+          <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white px-6 py-3 rounded-full text-lg  transition">
             Register Now
           </button>
         </Link>

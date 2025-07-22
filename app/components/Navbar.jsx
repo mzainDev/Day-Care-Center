@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { ChevronDown, Phone, ArrowRight, Menu, X } from 'lucide-react';
 import ExportedImage from "next-image-export-optimizer";
@@ -40,16 +39,16 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center justify-between w-full pl-10">
           <div className="flex space-x-8 text-[#0f2c4f] font-medium">
-            <Link href="/features" className="hover:text-[#5fe4e4] py-2">
+            <Link href="/features" className=" hover:text-[#1f8282] py-2">
               Features
             </Link>
-            <Link href="/targetclients" className="hover:text-[#5fe4e4]  py-2">
+            <Link href="/targetclients" className=" hover:text-[#1f8282]  py-2">
               Target Clients
             </Link>
-            <Link href="/contact" className="hover:text-[#5fe4e4] py-2">
+            <Link href="/contact" className=" hover:text-[#1f8282] py-2">
               Contact Us
             </Link>
-            <Link href="/registercenter" className="hover:text-[#5fe4e4] py-2">
+            <Link href="/registercenter" className="hover:text-[#1f8282] py-2">
               Register Your Center
             </Link>
           </div>
@@ -63,7 +62,7 @@ export default function Navbar() {
               <Phone className="w-4 h-4 mr-1" />
               (516) 842-7339
             </a>
-            <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-2 rounded-full flex items-center gap-2 transition shadow-sm hover:shadow-md">
+            <button className="bg-[#5fe4e4] hover:text-[#1f8282] text-white font-medium px-4 py-2 rounded-full flex items-center gap-2 transition shadow-sm hover:shadow-md">
               Book demo <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -75,36 +74,36 @@ export default function Navbar() {
             <div className="flex flex-col space-y-4">
               <Link
                 href="/features"
-                className="py-2 font-medium text-  [#1f8282]"
+                className="py-2 font-medium text-[#1f8282]"
               >
                 Features
               </Link>
               <Link
                 href="/targetclients"
-                className="py-2 font-medium text-[#0f2c4f]"
+                className="py-2 font-medium text-[#1f8282]"
               >
                 Target Clients
               </Link>
               <Link
                 href="/contact"
-                className="py-2 font-medium text-[#0f2c4f]"
+                className="py-2 font-medium text-[#1f8282]"
               >
                 Contact Us
               </Link>
               <Link
                 href="/registercenter"
-                className="py-2 font-medium text-[#0f2c4f]"
+                className="py-2 font-medium text-[#1f8282]"
               >
                 Register Your Center
               </Link>
               <a
                 href="tel:5168427339"
-                className="flex items-center py-2 text-blue-600"
+                className="flex items-center py-2 text-[#1f8282]"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 (516) 842-7339
               </a>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-3 rounded-full flex items-center justify-center gap-2 transition shadow-md">
+              <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-3 rounded-full flex items-center justify-center gap-2 transition shadow-md">
                 Book demo <ArrowRight className="w-4 h-4" />
               </button>
             </div>
