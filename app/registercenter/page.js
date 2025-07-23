@@ -1,5 +1,5 @@
 'use client';
-
+import CardComponent from '@/components/CardComponent'
 import React from 'react';
 
 const RegisterCenter = () => {
@@ -90,7 +90,8 @@ const RegisterCenter = () => {
                     </form>
                 </div>
             </section>
-        </>
+           <CardComponent/>
+           </>
     );
 };
 
