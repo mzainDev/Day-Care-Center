@@ -1,10 +1,71 @@
-import FaqSection from "@/components/FaqSection";
+'use client';
 
-export default function HomePage() {
+import { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
+
+const faqItems = [
+  {
+    question: "What is the purpose of this platform?",
+    answer: "This platform helps daycare centers manage staff, communicate with parents, and streamline daily operations."
+  },
+  {
+    question: "Is there a cost to register?",
+    answer: "Registration is currently free for all centers during our launch period."
+  },
+  {
+    question: "How can parents benefit from this?",
+    answer: "Parents get real-time updates about their child’s activities, attendance, and messages from teachers."
+  },
+  {
+    question: "Can I update my center’s information after registering?",
+    answer: "Yes, you can easily edit your center's profile, staff list, and more from the admin dashboard."
+  }
+];
+
+export default function FaqSection() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <>
-      {/* Other sections */}
-      <FaqSection />
-    </>
+    <section className="bg-gray-100 py-12 px-4">
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">FAQs</h2>
+        <div className="space-y-3">
+          {faqItems.map((item, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+              <button
+                onClick={() => toggle(index)}
+                className="w-full flex justify-between items-center p-4 text-left text-base font-medium text-gray-800 hover:bg-gray-50 transition"
+              >
+                {item.question}
+                <ChevronDown
+                  className={`transition-transform duration-300 ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25 }}
+                    className="px-4 pb-4 text-sm text-gray-600"
+                  >
+                    {item.answer}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

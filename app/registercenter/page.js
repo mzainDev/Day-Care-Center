@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import ContactCard from '@/components/ContactCard';
 import FaqSection from '@/components/FaqSection';
