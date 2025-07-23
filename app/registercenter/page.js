@@ -12,8 +12,8 @@ const RegisterCenter = () => {
 
   return (
     <>
-      <header className="bg-gradient-to-r from-blue-50 to-blue-100 py-20 px-6 text-center shadow-sm">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#5fe4e4] mb-4">
+      <header className=" py-20 px-6 text-center shadow-sm bg-gray-100">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#5fe4e9] mb-4">
           Register Your Childcare Center
         </h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -22,7 +22,7 @@ const RegisterCenter = () => {
       </header>
 
       {/* Form Section */}
-      <section className="py-16 px-6 bg-gradient-to-r from-blue-50 to-blue-100">
+      <section className="py-16 px-6 ">
         <div className="max-w-4xl mx-auto">
           <form
             onSubmit={handleSubmit}

@@ -12,7 +12,7 @@ const features = [
 
 export default function ContactCard() {
   return (
-    <div className="px-6 py-14 bg-gray-100">
+    <div className="px-6 py-14">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold text-gray-800 mb-10">Why Register?</h2>
         <div className="grid gap-8 sm:grid-cols-2">
