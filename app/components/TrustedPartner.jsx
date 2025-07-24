@@ -11,10 +11,10 @@ const TrustedPartner = () => {
   const sliderRef = useRef(null);
 
   const partners = [
-    { id: 1, logo: '/seclogo/2.png', alt: 'Partner 1' },
+    { id: 1, logo: '/seclogo/22.png', alt: 'Partner 1' },
     { id: 2, logo: '/seclogo/6.png', alt: 'Partner 2' },
-    { id: 3, logo: '/seclogo/7.png', alt: 'Partner 3' },
-    { id: 4, logo: '/seclogo/8.png', alt: 'Partner 4' }
+    { id: 3, logo: '/seclogo/77.png', alt: 'Partner 3' },
+    { id: 4, logo: '/seclogo/888.png', alt: 'Partner 4' }
   ];
 
   const settings = {
