@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState } from 'react';
 import { ChevronDown, Phone, ArrowRight, Menu, X } from 'lucide-react';
 import ExportedImage from "next-image-export-optimizer";
@@ -39,13 +39,13 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center justify-between w-full pl-10">
           <div className="flex space-x-8 text-[#0f2c4f] font-medium">
-            <Link href="/features" className=" hover:text-[#1f8282] py-2">
+            <Link href="/features" className="hover:text-[#1f8282] py-2">
               Features
             </Link>
-            <Link href="/targetclients" className=" hover:text-[#1f8282]  py-2">
+            <Link href="/targetclients" className="hover:text-[#1f8282] py-2">
               Target Clients
             </Link>
-            <Link href="/contact" className=" hover:text-[#1f8282] py-2">
+            <Link href="/contact" className="hover:text-[#1f8282] py-2">
               Contact Us
             </Link>
             <Link href="/registercenter" className="hover:text-[#1f8282] py-2">
@@ -75,24 +75,28 @@ export default function Navbar() {
               <Link
                 href="/features"
                 className="py-2 font-medium text-[#1f8282]"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Features
               </Link>
               <Link
                 href="/targetclients"
                 className="py-2 font-medium text-[#1f8282]"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Target Clients
               </Link>
               <Link
                 href="/contact"
                 className="py-2 font-medium text-[#1f8282]"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact Us
               </Link>
               <Link
                 href="/registercenter"
                 className="py-2 font-medium text-[#1f8282]"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Register Your Center
               </Link>

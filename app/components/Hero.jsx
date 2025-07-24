@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React from 'react';
 import ExportedImage from 'next-image-export-optimizer';
 import { ArrowRight, DollarSign, CalendarCheck, ClipboardList, MessageSquare, FileText, CreditCard } from 'lucide-react';
 
@@ -15,11 +15,11 @@ const Hero = () => {
                         <ArrowRight className="w-4 h-4 ml-1" />
                     </div>
 
-                    {/* Main Heading */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0f2c4f] leading-tight mb-6 tracking-tight">
-                        Child care management<br className="hidden sm:block" />
-                        software that makes your<br className="hidden sm:block" />
-                        families & teachers happier
+                    {/* Main Heading - Perfect spacing and line heights */}
+                    <h1 className="text-[1.75rem] leading-[2.25rem] sm:text-4xl sm:leading-[3rem] md:text-5xl md:leading-[3.5rem] font-extrabold text-[#0f2c4f] mb-6 tracking-tight">
+                        <span className="block sm:inline">Child care management</span>
+                        <span className="block sm:inline">&nbsp;software that makes</span>
+                        <span className="block sm:inline">&nbsp;families & teachers happier</span>
                     </h1>
 
                     {/* Subheading */}
@@ -76,7 +76,7 @@ const Hero = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Hero
+export default Hero;
