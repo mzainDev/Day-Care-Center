@@ -23,7 +23,7 @@ export default function ContactCard() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white shadow-xl rounded-3xl p-8 flex items-start gap-4 hover:shadow-2xl transition duration-300"
+              className="bg-white  rounded-3xl p-8 flex items-start gap-4 relative rounded-3xl overflow-hidden bg-white bg-opacity-30 backdrop-blur-md border border-blue-200/50 shadow-[0_25px_80px_rgba(92,225,230,0.3)] transition-transform duration-300 hover:scale-105"
             >
               <CheckCircle className="text-green-600 w-7 h-7 mt-1 shrink-0" />
               <p className="text-lg text-gray-700 text-left leading-relaxed">

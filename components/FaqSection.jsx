@@ -32,18 +32,18 @@ export default function FaqSection() {
   return (
     <section className="py-12 px-4">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">FAQs</h2>
+        <h2 className="text-4xl font-bold text-center mb-6 text-gray-800">FAQs</h2>
         <div className="space-y-3">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg shadow-sm transition-all duration-300"
+                className="bg-white border border-blue-200 rounded-lg shadow-sm transition-all duration-300"
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex justify-between items-center p-4 text-left text-base font-medium text-gray-800 hover:bg-gray-50 transition"
+                  className="w-full flex justify-between items-center p-4 text-left text-base font-medium text-gray-800 hover:bg-blue-50 transition"
                 >
                   {item.question}
                   <ChevronDown
