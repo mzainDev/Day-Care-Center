@@ -12,7 +12,7 @@ const RegisterCenter = () => {
 
   return (
     <>
-      <header className=" py-20 px-6 text-center shadow-sm ">
+      <header className=" py-20 px-6 text-center  ">
         <h1 className="text-4xl md:text-5xl font-bold text-[#5fe4e9] mb-4">
           Register Your Childcare Center
         </h1>
@@ -22,11 +22,12 @@ const RegisterCenter = () => {
       </header>
 
       {/* Form Section */}
-      <section className="py-16 px-6 ">
+      <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <form
             onSubmit={handleSubmit}
-            className="bg-gray-100 rounded-2xl shadow-xl p-10 grid gap-6"
+            className="rounded-2xl p-10 grid gap-6 bg-white bg-opacity-30 backdrop-blur-md border border-blue-200/50 rounded-3xl p-8 flex items-start gap-4 relative overflow-hidden shadow-[0_10px_60px_rgba(59,130,246,0.4)] transition-all duration-300 hover:shadow-[0_20px_100px_rgba(59,130,246,0.6)]"
+            
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>

@@ -55,13 +55,13 @@ const MultilingualSupport = () => {
             <div className="flex gap-4 mt-10">
               <Link
                 href="#multilingual"
-                className="flex items-center px-6 py-2.5 text-sm font-semibold text-white  rounded-lg shadow bg-[#5fe4e4] hover:text-[#1f8282] transition"
+                className="flex items-center px-6 py-2.5 text-sm font-semibold text-white  rounded-lg shadow bg-[#5fe4e4] hover:bg-[#1f8282] transition"
               >
                 Learn More
               </Link>
               <Link
                 href="#demo"
-                className="px-6 py-2.5 text-sm font-semibold rounded-lg text-white bg-[#5fe4e4] hover:text-[#1f8282] transition"
+                className="px-6 py-2.5 text-sm font-semibold rounded-lg text-white bg-[#5fe4e4] hover:bg-[#1f8282] transition"
               >
                 Try Demo
               </Link>

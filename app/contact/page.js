@@ -7,12 +7,12 @@ export default function Contact() {
     <div className='mb-15'>
 
       <ContactCards />
-      <div className="bg-gray-100 py-16 px-4 md:px-12">
+      <div className="py-16 px-4 md:px-12">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center text-[#5fe4e4] mb-12 s"
+          className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12 s"
         >
           Contact Us
         </motion.h2>
