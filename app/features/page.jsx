@@ -1,11 +1,12 @@
-import AttendanceSystem from "@/featurePageComponents/AttendanceSystem";
-import ComplianceForms from "@/featurePageComponents/ComplianceForms";
-import ComprehensiveReports from "@/featurePageComponents/ComprehensiveReports";
-import FeaturesPage from "@/featurePageComponents/FeaturesPage";
-import GuardianDashboard from "@/featurePageComponents/GuardianDashboard";
-import MultilingualSupport from "@/featurePageComponents/MultilingualSupport";
-import StaffManagement from "@/featurePageComponents/StaffManagement";
-import SubscriptionPlans from "@/featurePageComponents/SubscriptionPlans";
+import AttendanceSystem from "../components/AttendanceSystem";
+import ComplianceForms from "../components/ComplianceForms";
+import ComprehensiveReports from "../components/ComprehensiveReports";
+import FeaturesPage from "../components/FeaturesPage";
+import GuardianDashboard from "../components/GuardianDashboard";
+import MultilingualSupport from "../components/MultilingualSupport";
+import StaffManagement from "../components/StaffManagement";
+import SubscriptionPlans from "../components/SubscriptionPlans";
+
 
 
 export default function page() {
