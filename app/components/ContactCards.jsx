@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactCards() {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center gap-6 p-8  mb-10 mt-10 mx-8">
+    <div className="flex flex-col md:flex-row justify-center items-center gap-6 p-8  mb-10 mt-10 mx-8   ">
       {/* Phone Card */}
       <div className="bg-white shadow-md rounded-xl p-6 text-center w-full md:w-1/3 flex flex-col items-center justify-center min-h-[170px] hover:shadow-xl hover:scale-105 transition duration-300">
         <div className="text-[#5fe4e4] mb-4">
