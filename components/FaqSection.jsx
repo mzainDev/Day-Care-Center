@@ -6,20 +6,20 @@ import { ChevronDown } from 'lucide-react';
 const faqItems = [
   {
     question: "What is the purpose of this platform?",
-    answer: "This platform helps daycare centers manage staff, communicate with parents, and streamline daily operations."
+    answer: "This platform helps daycare centers manage staff, communicate with parents, and streamline daily operations.",
   },
   {
     question: "Is there a cost to register?",
-    answer: "Registration is currently free for all centers during our launch period."
+    answer: "Registration is currently free for all centers during our launch period.",
   },
   {
     question: "How can parents benefit from this?",
-    answer: "Parents get real-time updates about their child’s activities, attendance, and messages from teachers."
+    answer: "Parents get real-time updates about their child’s activities, attendance, and messages from teachers.",
   },
   {
     question: "Can I update my center’s information after registering?",
-    answer: "Yes, you can easily edit your center's profile, staff list, and more from the admin dashboard."
-  }
+    answer: "Yes, you can easily edit your center's profile, staff list, and more from the admin dashboard.",
+  },
 ];
 
 export default function FaqSection() {
@@ -30,37 +30,39 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="py-12 px-4">
+    <section className="py-12 px-4 ">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-6 text-gray-800">FAQs</h2>
-        <div className="space-y-3">
+        <h2 className="text-4xl font-bold text-[#00254d] mb-4 text-center">Frequently Asked Questions</h2>
+        <p className="text-base text-center text-gray-600 mb-8">
+          Rawdhat combines powerful technology with intuitive design to transform how you manage your center.
+        </p>
+
+        <div className="space-y-4">
           {faqItems.map((item, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={index}
-                className="bg-white border border-blue-200 rounded-lg shadow-sm transition-all duration-300"
+                className="bg-white border border-blue-100 rounded-lg shadow-sm"
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="w-full flex justify-between items-center p-4 text-left text-base font-medium text-gray-800 hover:bg-blue-50 transition"
+                  className="w-full flex justify-between items-center px-5 py-4 text-left text-gray-800 font-medium hover:bg-blue-50 transition"
                 >
-                  {item.question}
+                  <span>{item.question}</span>
                   <ChevronDown
-                    className={`transform transition-transform duration-200 ${
+                    className={`w-5 h-5 transform transition-transform duration-300 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                   />
                 </button>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isOpen ? 'max-h-40 py-2 px-4' : 'max-h-0 py-0 px-4'
+                  className={`px-5 transition-all duration-300 ease-in-out overflow-hidden ${
+                    isOpen ? 'max-h-[500px] py-2' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-sm text-gray-600">
-                    {item.answer}
-                  </p>
+                  <p className="text-sm text-gray-600">{item.answer}</p>
                 </div>
               </div>
             );

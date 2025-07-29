@@ -95,7 +95,7 @@ const FeaturePreview = () => {
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#00254d] leading-tight mb-3 md:mb-4">
             <span className="relative inline-block">
               <span className="relative z-10">The Complete</span>
-              <span className="absolute bottom-1 left-0 w-full h-2 md:h-3 bg-[#e6f1ff] z-0 opacity-70" />
+              <span className="absolute bottom-1 left-0 w-full h-2 md:h-3 bg-[#e6f1ff] z-0 opacity-70"/>
             </span>
             <br />
             Child Care Solution

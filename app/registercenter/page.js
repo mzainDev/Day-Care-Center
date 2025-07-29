@@ -102,7 +102,7 @@ const RegisterCenter = () => {
         </div>
       </section>
 
-      <section className="bg-white py-14 px-6">
+      <section className="bg-white py-2 px-6">
         <ContactCard />
         <div className="mt-10">
           <FaqSection />
