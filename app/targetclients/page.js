@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 
-import targetClients1 from '@/app/assets/image/targetClients1.jpg'
-import targetClients2 from '@/app/assets/image/targetClients2.jpg'
-import targetClients3 from '@/app/assets/image/targetClients3.jpg'
+import targetClients1 from '@/public/image/targetClients1.jpg';
+import targetClients2 from '@/public/image/targetClients2.jpg';
+import targetClients3 from '@/public/image/targetClients3.jpg';
 
 
 const sections = [
