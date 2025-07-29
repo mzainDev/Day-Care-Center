@@ -6,6 +6,8 @@ import GuardianDashboard from "@/featurePageComponents/GuardianDashboard";
 import MultilingualSupport from "@/featurePageComponents/MultilingualSupport";
 import StaffManagement from "@/featurePageComponents/StaffManagement";
 import SubscriptionPlans from "@/featurePageComponents/SubscriptionPlans";
+import SettingOverview from "@/featurePageComponents/SettingOverview";
+import ReminderSetting from "@/featurePageComponents/RemainderSetting";
 
 
 export default function page() {
@@ -17,6 +19,8 @@ export default function page() {
       <AttendanceSystem/>
       <ComprehensiveReports/>
       <SubscriptionPlans/>
+      <SettingOverview/>
+      <ReminderSetting/>
       <MultilingualSupport/>
       <ComplianceForms/>
     </div>

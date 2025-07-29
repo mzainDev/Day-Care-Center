@@ -157,7 +157,8 @@ const FeaturesPage = () => {
                 </svg>
               ),
               title: 'Real-time Analytics',
-              desc: 'Live data visualization of critical metrics'
+              desc: 'Live data visualization of critical metrics',
+              bg: "bg-gradient-to-br from-blue-400 via-cyan-200 to-blue-200",
             },
             {
               icon: (
@@ -166,7 +167,8 @@ const FeaturesPage = () => {
                 </svg>
               ),
               title: 'Staff Management',
-              desc: 'Complete control over staff assignments'
+              desc: 'Complete control over staff assignments',
+              bg: "bg-gradient-to-br from-green-200 via-lime-300 to-green-200",
             },
             {
               icon: (
@@ -175,10 +177,11 @@ const FeaturesPage = () => {
                 </svg>
               ),
               title: 'Comprehensive Reports',
-              desc: 'Generate detailed insights and analytics'
+              desc: 'Generate detailed insights and analytics',
+              bg: "bg-gradient-to-br from-indigo-400 via-violet-300 to-indigo-200",
             }
           ].map((item, i) => (
-            <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+            <div key={i} className={`${item.bg} p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all`}>
               <div className="text-[rgb(92,225,230)] mb-4">{item.icon}</div>
               <h3 className="text-xl font-semibold text-slate-800 mb-2">{item.title}</h3>
               <p className="text-slate-600">{item.desc}</p>
