@@ -60,12 +60,13 @@ export default function TestimonialSec() {
   return (
     <section className="py-24 bg-gradient-to-b from-sky-50 via-white to-green-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '0px 0px -100px 0px' }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
           className="text-center mb-20"
         >
           <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
@@ -81,7 +82,7 @@ export default function TestimonialSec() {
           </p>
         </motion.div>
 
-        {/* Carousel */}
+        {/* Swiper Carousel */}
         <div className="relative px-4">
           <Swiper
             modules={[Navigation, Pagination, Autoplay, A11y]}
@@ -111,21 +112,16 @@ export default function TestimonialSec() {
             onAutoplayTimeLeft={onAutoplayTimeLeft}
             className="!pb-12"
           >
-            {TESTIMONIALS.map((testimonial, index) => (
+            {TESTIMONIALS.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -6, scale: 1.02 }}
-                  className="h-[450px] bg-white p-8 rounded-2xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col justify-between"
+                  transition={{ duration: 0.4 }}
+                  className="h-[450px] bg-white p-8 rounded-2xl shadow-md border border-gray-100 transition-colors duration-200 flex flex-col justify-between"
                 >
-                  <svg
-                    className="w-10 h-10 text-blue-300 mb-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                  <svg className="w-10 h-10 text-blue-300 mb-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
                   <blockquote className="mb-8">
@@ -160,27 +156,17 @@ export default function TestimonialSec() {
             ))}
           </Swiper>
 
-          {/* Navigation and pagination */}
+          {/* Navigation */}
           <div className="absolute inset-y-0 left-0 z-10 flex items-center -ml-4">
             <button className="testimonial-prev w-12 h-12 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-gray-700"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
           </div>
           <div className="absolute inset-y-0 right-0 z-10 flex items-center -mr-4">
             <button className="testimonial-next w-12 h-12 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-colors flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-gray-700"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -193,12 +179,12 @@ export default function TestimonialSec() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.4 }}
           className="mt-24 text-center"
         >
           <Link
             href="/demo"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl hover:opacity-90 transition-all duration-300 text-lg"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl font-semibold shadow-lg hover:opacity-90 transition-all duration-200 text-lg"
           >
             Schedule a Demo
             <svg className="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
