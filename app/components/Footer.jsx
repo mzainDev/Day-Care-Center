@@ -12,13 +12,17 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
                     {/* Column 1: Logo and Description */}
                     <div className="space-y-6">
-                        <ExportedImage
-                            src="/logos/logo.png"
-                            alt="Rawdhat Logo"
-                            width={160}
-                            height={50}
-                            className="bg-white p-2 rounded-md"
-                        />
+                        <div className="bg-white p-2 rounded-md w-[160px] h-[50px]">
+                            <Link href="/">
+                                <ExportedImage
+                                    src="/logos/logo.png"
+                                    alt="Rawdhat Logo"
+                                    width={160}
+                                    height={50}
+                                    className="w-full h-full object-contain"
+                                />
+                            </Link>
+                        </div>
                         <p className="text-gray-300 text-sm leading-relaxed">
                             Rawdhat offers comprehensive childcare management solutions that simplify operations
                             and enhance the experience for families and teachers alike.
@@ -41,25 +45,24 @@ const Footer = () => {
 
                     {/* Column 2: Quick Links */}
                     <div>
-                        <h3 className="font-semibold text-lg mb-4">Solutions</h3>
+                        <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
                         <ul className="space-y-3">
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Billing & Payments</Link></li>
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Registration & Enrollment</Link></li>
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Attendance Tracking</Link></li>
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Parent Communication</Link></li>
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Staff Management</Link></li>
+                            <li><Link href="/features" className="text-gray-300 hover:text-white transition">Features</Link></li>
+                            <li><Link href="/targetclients" className="text-gray-300 hover:text-white transition">Target Clients</Link></li>
+                            <li><Link href="/contact" className="text-gray-300 hover:text-white transition">Contact</Link></li>
+                            <li><Link href="/registercenter" className="text-gray-300 hover:text-white transition">Register Center</Link></li>
                         </ul>
                     </div>
 
-                    {/* Column 3: Resources */}
+                    {/* Column 3: Features */}
                     <div>
-                        <h3 className="font-semibold text-lg mb-4">Resources</h3>
+                        <h3 className="font-semibold text-lg mb-4">Features</h3>
                         <ul className="space-y-3">
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Blog</Link></li>
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Webinars</Link></li>
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Case Studies</Link></li>
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Help Center</Link></li>
-                            <li><Link href="#" className="text-gray-300 hover:text-white transition">Pricing</Link></li>
+                            <li><Link href="/features" className="text-gray-300 hover:text-white transition">Attendance System</Link></li>
+                            <li><Link href="/features" className="text-gray-300 hover:text-white transition">Seamless Chat Feature</Link></li>
+                            <li><Link href="/features" className="text-gray-300 hover:text-white transition">Compliance Forms</Link></li>
+                            <li><Link href="/features" className="text-gray-300 hover:text-white transition">Comprehensive Reports</Link></li>
+                            <li><Link href="/features" className="text-gray-300 hover:text-white transition">Subscription Plans</Link></li>
                         </ul>
                     </div>
 
