@@ -57,7 +57,7 @@ export default function SettingOverview() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: Image */}
           <div className="w-full h-full">
-            <div className=" h-full rounded-3xl overflow-hidden border border-gray-200 shadow-[0_10px_30px_rgba(59,130,246,0.4)] transition duration-300 hover:scale-[1.02]">
+            <div className="h-full rounded-3xl overflow-hidden border border-gray-200 shadow-[0_10px_30px_rgba(59,130,246,0.4)] transition duration-300 hover:scale-[1.02]">
               <ExportedImage
                 src={portalSetting}
                 alt="Portal Settings UI"
