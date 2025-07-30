@@ -62,7 +62,7 @@ export default function SettingOverview() {
                 src={portalSetting}
                 alt="Portal Settings UI"
                 width={800}
-                height={600}
+                height={500}
                 className="w-full h-full object-contain"
               />
             </div>
