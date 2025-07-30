@@ -2,7 +2,7 @@
 
 import ExportedImage from 'next-image-export-optimizer';
 import { CheckCircle } from 'lucide-react';
-import portalSetting from '@/app/assets/image/portalSetting.png'; // Replace with your actual image
+import portalSetting from '../../public/image/portalSetting.png'; // Replace with your actual image
 
 const settings = [
   {
@@ -53,46 +53,46 @@ export default function SettingOverview() {
         </div>
 
         {/* Grid Layout */}
-       
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-  {/* Left: Image */}
-  <div className="w-full h-full">
-    <div className=" h-full rounded-3xl overflow-hidden border border-gray-200 shadow-[0_10px_30px_rgba(59,130,246,0.4)] transition duration-300 hover:scale-[1.02]">
-      <ExportedImage
-        src={portalSetting}
-        alt="Portal Settings UI"
-        width={800}
-        height={600}
-        className="w-full h-full object-contain"
-      />
-    </div>
-    <p className="text-sm text-gray-500 mt-3 text-center">
-      Preview: Portal Settings UI
-    </p>
-  </div>
 
-  {/* Right: Cards in 2-column layout */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-    {settings.map((item, index) => (
-      <div
-        key={index}
-        className="bg-gray-50 border border-blue-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300"
-      >
-        <div className="flex items-start gap-4">
-          <CheckCircle className="text-emerald-600 w-6 h-6 mt-1" />
-          <div>
-            <h3 className="text-base md:text-lg font-semibold text-[#0e7490]">
-              {item.title}
-            </h3>
-            <p className="text-gray-600 text-sm leading-relaxed mt-1">
-              {item.description}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          {/* Left: Image */}
+          <div className="w-full h-full">
+            <div className=" h-full rounded-3xl overflow-hidden border border-gray-200 shadow-[0_10px_30px_rgba(59,130,246,0.4)] transition duration-300 hover:scale-[1.02]">
+              <ExportedImage
+                src={portalSetting}
+                alt="Portal Settings UI"
+                width={800}
+                height={600}
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <p className="text-sm text-gray-500 mt-3 text-center">
+              Preview: Portal Settings UI
             </p>
           </div>
+
+          {/* Right: Cards in 2-column layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {settings.map((item, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 border border-blue-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="text-emerald-600 w-6 h-6 mt-1" />
+                  <div>
+                    <h3 className="text-base md:text-lg font-semibold text-[#0e7490]">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed mt-1">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-</div>
 
       </div>
     </section>

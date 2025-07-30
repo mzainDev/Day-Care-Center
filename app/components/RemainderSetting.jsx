@@ -1,7 +1,7 @@
 "use client";
 
 import ExportedImage from "next-image-export-optimizer";
-import autoReminder from "@/app/assets/image/autoReminder.png";
+import autoReminder from "../../public/image/autoReminder.png";
 import { Bell, FileText, Compass } from "lucide-react";
 
 const reminders = [
@@ -28,13 +28,13 @@ const reminders = [
     description:
       "Sends a welcome or onboarding guide to new users of the portal.",
   },
-    {
+  {
     icon: <Compass className="text-purple-500 w-6 h-6" />,
     title: "Portal Onboarding Guide",
     description:
       "Sends a welcome or onboarding guide to new users of the portal.",
   },
-    {
+  {
     icon: <Compass className="text-purple-500 w-6 h-6" />,
     title: "Portal Onboarding Guide",
     description:
