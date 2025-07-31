@@ -27,25 +27,14 @@ const RegisterCenter = () => {
           <form
             onSubmit={handleSubmit}
             className="rounded-2xl p-10 grid gap-6 bg-white bg-opacity-30 backdrop-blur-md border border-blue-200/50 rounded-3xl p-8 flex items-start gap-4 relative overflow-hidden shadow-[0_10px_60px_rgba(59,130,246,0.4)] transition-all duration-300 hover:shadow-[0_20px_100px_rgba(59,130,246,0.6)]"
-            
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="centerName" className="block text-gray-700 font-medium mb-2">Center Name</label>
+                <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Center Name</label>
                 <input
-                  id="centerName"
+                  id="name"
                   type="text"
                   placeholder="e.g. Kids Care Academy"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="adminName" className="block text-gray-700 font-medium mb-2">Admin Name</label>
-                <input
-                  id="adminName"
-                  type="text"
-                  placeholder="e.g. M.Zain"
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
                   required
                 />
@@ -61,13 +50,68 @@ const RegisterCenter = () => {
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">Phone Number</label>
+                <label htmlFor="password" className="block text-gray-700 font-medium mb-2">Password</label>
                 <input
-                  id="phone"
+                  id="password"
+                  type="password"
+                  placeholder="••••••••"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="confirmPassword" className="block text-gray-700 font-medium mb-2">Confirm Password</label>
+                <input
+                  id="confirmPassword"
+                  type="password"
+                  placeholder="••••••••"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="nameOfDirector" className="block text-gray-700 font-medium mb-2">Name of Director</label>
+                <input
+                  id="nameOfDirector"
+                  type="text"
+                  placeholder="e.g. Ayesha Khan"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="centerManager" className="block text-gray-700 font-medium mb-2">Center Manager</label>
+                <input
+                  id="centerManager"
+                  type="text"
+                  placeholder="e.g. Umar Farooq"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="address" className="block text-gray-700 font-medium mb-2">Full Address</label>
+                <input
+                  id="address"
+                  type="text"
+                  placeholder="e.g. House 12, Main Street, Gulberg"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="phoneNo" className="block text-gray-700 font-medium mb-2">Phone Number</label>
+                <input
+                  id="phoneNo"
                   type="tel"
                   placeholder="e.g. 0301-1234567"
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="capacity" className="block text-gray-700 font-medium mb-2">Capacity</label>
+                <input
+                  id="capacity"
+                  type="number"
+                  placeholder="e.g. 120"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 />
               </div>
               <div>
@@ -77,17 +121,24 @@ const RegisterCenter = () => {
                   type="text"
                   placeholder="e.g. Lahore"
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  required
                 />
               </div>
               <div>
-                <label htmlFor="password" className="block text-gray-700 font-medium mb-2">Password</label>
+                <label htmlFor="district" className="block text-gray-700 font-medium mb-2">District</label>
                 <input
-                  id="password"
-                  type="password"
-                  placeholder="••••••••"
+                  id="district"
+                  type="text"
+                  placeholder="e.g. Lahore Cantt"
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                  required
+                />
+              </div>
+              <div>
+                <label htmlFor="shortAddress" className="block text-gray-700 font-medium mb-2">Short Address</label>
+                <input
+                  id="shortAddress"
+                  type="text"
+                  placeholder="e.g. Gulberg III"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 />
               </div>
             </div>
@@ -99,6 +150,7 @@ const RegisterCenter = () => {
               Submit for Activation
             </button>
           </form>
+
         </div>
       </section>
 
