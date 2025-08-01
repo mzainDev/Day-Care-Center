@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,9 +18,11 @@
     "next-image-export-optimizer": "^1.19.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-slick": "^0.30.3",
     "react-swipeable": "^7.0.2",
     "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.22.2",
     "swiper": "^11.2.10",
     "tailwind-merge": "^3.3.1"
   },

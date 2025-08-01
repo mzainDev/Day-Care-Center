@@ -1,18 +1,87 @@
-'use client'
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import ContactCard from '@/components/ContactCard';
 import FaqSection from '@/components/FaqSection';
+import Swal from 'sweetalert2';
 
 const RegisterCenter = () => {
-  const handleSubmit = (e) => {
+  const [captchaToken, setCaptchaToken] = useState(null);
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaToken(value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Send data to API or DB
-    alert('Form submitted!');
+
+    if (!captchaToken) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'CAPTCHA Required',
+        text: 'Please complete the CAPTCHA to continue.',
+      });
+      return;
+    }
+
+    // Collect form data
+    const form = e.target;
+    const formData = {
+      name: form.name.value,
+      isActive: 0, // or 1 if you want to set active by default
+      email: form.email.value,
+      password: form.password.value,
+      confirmpassword: form.confirmPassword.value,
+      nameOfDirector: form.nameOfDirector.value,
+      centerManager: form.centerManager.value,
+      address: form.address.value,
+      phoneNo: form.phoneNo.value,
+      capacity: form.capacity.value,
+      city: form.city.value,
+      district: form.district.value,
+      shortaddress: form.shortAddress.value,
+      captchaToken,
+    };
+
+    try {
+      const res = await fetch(
+        // "http://localhost:5000/register-center",
+        "https://back.hadnat.site/register-center",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+      const data = await res.json();
+
+      if (!data.success) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Registration Failed',
+          text: data.message || "Registration failed.",
+        });
+        return;
+      }
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: 'Center registered successfully!',
+      });
+      form.reset();
+      setCaptchaToken(null);
+    } catch (err) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Server Error',
+        text: 'Server error. Please try again later.',
+      });
+    }
   };
 
   return (
     <>
-      <header className=" py-20 px-6 text-center  ">
+      <header className="py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-[#5fe4e9] mb-4">
           Register Your Childcare Center
         </h1>
@@ -141,6 +210,15 @@ const RegisterCenter = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 />
               </div>
+            </div>
+
+            {/* 🛡️ CAPTCHA Component */}
+            <div className="w-full mt-4 flex justify-center">
+              <ReCAPTCHA
+                // sitekey="6LfdWpUrAAAAAMDz5dinc3py3eJGLF8NvlGn9xqi",
+                sitekey="6LcQ9ZYrAAAAAGL9t6vFelXxAcs-MsPooF68FX6V"
+                onChange={handleCaptchaChange}
+              />
             </div>
 
             <button
