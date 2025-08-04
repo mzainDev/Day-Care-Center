@@ -70,9 +70,9 @@ useEffect(() => {
 console.log("form data",formData);
     try {
       const res = await fetch(
-        "http://localhost:5000/signup-center",
+        // "http://localhost:5000/signup-center",
         // "http://localhost:5000/register-center",
-        // "https://back.hadnat.site/register-center",
+        "https://back.hadnat.site/signup-center",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -261,8 +261,8 @@ setSelectedPlanId('');
             <div className="w-full mt-4 flex justify-center">
               <ReCAPTCHA
                 // sitekey="6LfdWpUrAAAAAMDz5dinc3py3eJGLF8NvlGn9xqi",
-                // sitekey="6LcQ9ZYrAAAAAGL9t6vFelXxAcs-MsPooF68FX6V"---yamaan
-                sitekey="6LeA-JcrAAAAAMD2UOvgQRHf4j1hf2PdStdMnhq3"
+                sitekey="6Ldg6ZkrAAAAAL8cOaMdjji74P4buN9vlMxCtXiw"
+                // sitekey="6LeA-JcrAAAAAMD2UOvgQRHf4j1hf2PdStdMnhq3"
                 onChange={handleCaptchaChange}
               />
             </div>
