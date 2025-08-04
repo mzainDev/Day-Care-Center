@@ -37,7 +37,7 @@ const validationSchema = Yup.object({
   city: Yup.string().required('City is required'),
   district: Yup.string().required('District is required'),
   shortaddress: Yup.string().required('Short Address is required'),
-  centerPlanId: Yup.string().required('Plan selection is required'),
+  // centerPlanId: Yup.string().required('Plan selection is required'),
 });
 
 const RegisterCenter = () => {
@@ -98,7 +98,7 @@ const RegisterCenter = () => {
       district: form.district.value,
       shortaddress: form.shortAddress.value,
       captchaToken,
-      centerPlanId: selectedPlanId, // 👈 added this
+      // centerPlanId: selectedPlanId, 
     };
 
     console.log("form data", formData);
@@ -167,7 +167,7 @@ const RegisterCenter = () => {
               city: '',
               district: '',
               shortaddress: '',
-              centerPlanId: '',
+              // centerPlanId: '',
             }}
             validationSchema={validationSchema}
             onSubmit={async (values, { setSubmitting, resetForm }) => {
@@ -184,7 +184,7 @@ const RegisterCenter = () => {
                 ...values,
                 isActive: 0,
                 captchaToken,
-                centerPlanId: selectedPlanId,
+                // centerPlanId: selectedPlanId,
               };
 
               try {
@@ -300,7 +300,7 @@ const RegisterCenter = () => {
                   <div>
                     <label htmlFor="nameOfDirector" className="block text-gray-700 font-medium mb-2">
                       <User className="inline w-4 h-4 mr-2" />
-                      Name of Director <span className="text-red-500">*</span>
+                      Name of Center Owner <span className="text-red-500">*</span>
                     </label>
                     <Field
                       name="nameOfDirector"
@@ -317,7 +317,7 @@ const RegisterCenter = () => {
                   <div>
                     <label htmlFor="centerManager" className="block text-gray-700 font-medium mb-2">
                       <Users className="inline w-4 h-4 mr-2" />
-                      Center Manager <span className="text-red-500">*</span>
+                     Name of Center Manager <span className="text-red-500">*</span>
                     </label>
                     <Field
                       name="centerManager"
@@ -433,7 +433,7 @@ const RegisterCenter = () => {
                   </div>
 
                   {/* Center Plan Field */}
-                  <div>
+                  {/* <div>
                     <label htmlFor="centerPlanId" className="block text-gray-700 font-medium mb-2">
                       <LayoutGrid className="inline w-4 h-4 mr-2" />
                       Select Plan <span className="text-red-500">*</span>
@@ -453,7 +453,7 @@ const RegisterCenter = () => {
                     {errors.centerPlanId && touched.centerPlanId && (
                       <div className="text-red-500 text-sm mt-1">{errors.centerPlanId}</div>
                     )}
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="w-full mt-4 flex justify-center">
