@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import ContactCard from '@/components/ContactCard';
 import FaqSection from '@/components/FaqSection';
@@ -7,6 +8,28 @@ import Swal from 'sweetalert2';
 
 const RegisterCenter = () => {
   const [captchaToken, setCaptchaToken] = useState(null);
+const [plans, setPlans] = useState([]);
+const [selectedPlanId, setSelectedPlanId] = useState('');
+
+
+
+useEffect(() => {
+  const fetchPlans = async () => {
+    try {
+      const response = await fetch("https://rawdhat.com/api/center/getCenterPlans");
+      const data = await response.json();
+      if (Array.isArray(data)) {
+        setPlans(data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch plans:", error);
+    }
+  };
+
+  fetchPlans();
+}, []);
+
+
 
   const handleCaptchaChange = (value) => {
     setCaptchaToken(value);
@@ -26,34 +49,37 @@ const RegisterCenter = () => {
 
     // Collect form data
     const form = e.target;
-    const formData = {
-      name: form.name.value,
-      isActive: 0, // or 1 if you want to set active by default
-      email: form.email.value,
-      password: form.password.value,
-      confirmpassword: form.confirmPassword.value,
-      nameOfDirector: form.nameOfDirector.value,
-      centerManager: form.centerManager.value,
-      address: form.address.value,
-      phoneNo: form.phoneNo.value,
-      capacity: form.capacity.value,
-      city: form.city.value,
-      district: form.district.value,
-      shortaddress: form.shortAddress.value,
-      captchaToken,
-    };
+  const formData = {
+  name: form.name.value,
+  isActive: 0,
+  email: form.email.value,
+  password: form.password.value,
+  confirmpassword: form.confirmPassword.value,
+  nameOfDirector: form.nameOfDirector.value,
+  centerManager: form.centerManager.value,
+  address: form.address.value,
+  phoneNo: form.phoneNo.value,
+  capacity: form.capacity.value,
+  city: form.city.value,
+  district: form.district.value,
+  shortaddress: form.shortAddress.value,
+  captchaToken,
+  centerPlanId: selectedPlanId, // 👈 added this
+};
 
+console.log("form data",formData);
     try {
       const res = await fetch(
+        "http://localhost:5000/signup-center",
         // "http://localhost:5000/register-center",
-        "https://back.hadnat.site/register-center",
+        // "https://back.hadnat.site/register-center",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
         });
       const data = await res.json();
-
+console.log("Response from server:", data);
       if (!data.success) {
         Swal.fire({
           icon: 'error',
@@ -68,8 +94,9 @@ const RegisterCenter = () => {
         title: 'Success!',
         text: 'Center registered successfully!',
       });
-      form.reset();
-      setCaptchaToken(null);
+    form.reset();
+setCaptchaToken(null);
+setSelectedPlanId('');
     } catch (err) {
       Swal.fire({
         icon: 'error',
@@ -210,13 +237,32 @@ const RegisterCenter = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
                 />
               </div>
+              <div>
+  <label htmlFor="centerPlan" className="block text-gray-700 font-medium mb-2">Select Plan</label>
+  <select
+    id="centerPlan"
+    value={selectedPlanId}
+    onChange={(e) => setSelectedPlanId(e.target.value)}
+    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none"
+    required
+  >
+    <option value="" disabled>Select a plan</option>
+    {plans.map((plan) => (
+      <option key={plan.id} value={plan.id}>
+        {plan.name} - {plan.days} Days - {plan.price} SAR
+      </option>
+    ))}
+  </select>
+</div>
+
             </div>
 
             {/* 🛡️ CAPTCHA Component */}
             <div className="w-full mt-4 flex justify-center">
               <ReCAPTCHA
                 // sitekey="6LfdWpUrAAAAAMDz5dinc3py3eJGLF8NvlGn9xqi",
-                sitekey="6LcQ9ZYrAAAAAGL9t6vFelXxAcs-MsPooF68FX6V"
+                // sitekey="6LcQ9ZYrAAAAAGL9t6vFelXxAcs-MsPooF68FX6V"---yamaan
+                sitekey="6LeA-JcrAAAAAMD2UOvgQRHf4j1hf2PdStdMnhq3"
                 onChange={handleCaptchaChange}
               />
             </div>
