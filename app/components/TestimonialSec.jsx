@@ -58,7 +58,7 @@ export default function TestimonialSec() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
     cssEase: 'linear',
     appendDots: dots => <div className="testimonial-pagination mt-10 flex items-center justify-center space-x-2">{dots}</div>,
