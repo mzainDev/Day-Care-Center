@@ -1,15 +1,3 @@
-
-// import AttendanceSystem from "@/featurePageComponents/AttendanceSystem";
-// import ComplianceForms from "@/featurePageComponents/ComplianceForms";
-// import ComprehensiveReports from "@/featurePageComponents/ComprehensiveReports";
-// import FeaturesPage from "@/featurePageComponents/FeaturesPage";
-// import GuardianDashboard from "@/featurePageComponents/GuardianDashboard";
-// import MultilingualSupport from "@/featurePageComponents/MultilingualSupport";
-// import StaffManagement from "@/featurePageComponents/StaffManagement";
-// import SubscriptionPlans from "@/featurePageComponents/SubscriptionPlans";
-// import SettingOverview from "@/featurePageComponents/SettingOverview";
-// import ReminderSetting from "@/featurePageComponents/RemainderSetting";
-
 import AttendanceSystem from "../components/AttendanceSystem";
 import ChatFeature from "../components/ChatFeature";
 import ComplianceForms from "../components/ComplianceForms";
@@ -22,10 +10,16 @@ import StaffManagement from "../components/StaffManagement";
 import SubscriptionPlans from "../components/SubscriptionPlans";
 import SettingOverview from "../components/SettingOverview";
 import AutoReminderSettings from "../components/RemainderSetting";
+import { generateMetadata as generateSEO } from "../components/Meta"; 
 
 
+export async function generateMetadata() {
+  const metadata = await generateSEO();
+  return metadata.features;
+}
 
-export default function page() {
+
+export default function Features() {
   return (
     <div>
       <FeaturesPage />
@@ -41,5 +35,5 @@ export default function page() {
       <PickupRequest />
       <ChatFeature />
     </div>
-  )
+  );
 }

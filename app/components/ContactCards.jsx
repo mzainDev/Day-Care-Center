@@ -30,7 +30,7 @@ export default function ContactCards() {
         <div className="bg-white rounded-full p-1 text-[#5fe4e4] mb-4">
           <MapPin size={36} />
         </div>
-        <h3 className="text-sm font-bold text-gray-700 leading-snug">
+        <h3 className="text-sm font-bold text-gray-700 leading-snug"> 
           WESTERN RING ROAD,<br />
           WESTERN URAIJA, RIYADH 14921
         </h3>

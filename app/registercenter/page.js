@@ -22,6 +22,14 @@ import {
   Hash
 } from 'lucide-react';
 
+import { generateMetadata as generateSEO } from "../components/Meta"; 
+
+
+export async function generateMetadata() {
+  const metadata = await generateSEO();
+  return metadata.registercenter;
+}
+
 const validationSchema = Yup.object({
   name: Yup.string().required('Center Name is required'),
   email: Yup.string().email('Invalid email format').required('Email is required'),

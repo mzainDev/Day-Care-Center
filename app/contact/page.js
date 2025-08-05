@@ -1,6 +1,13 @@
 'use client';
 import ContactCards from '../components/ContactCards';
 import { motion } from 'framer-motion';
+import { generateMetadata as generateSEO } from "../components/Meta"; 
+
+
+export async function generateMetadata() {
+  const metadata = await generateSEO();
+  return metadata.contact;
+}
 
 export default function Contact() {
   return (
