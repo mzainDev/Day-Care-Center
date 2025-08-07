@@ -35,13 +35,13 @@ const sections = [
     image: targetClients3,
   },
 ]
-import { generateMetadata as generateSEO } from "../components/Meta"; 
+// import { generateMetadata as generateSEO } from "../components/Meta"; 
 
 
-export async function generateMetadata() {
-  const metadata = await generateSEO();
-  return metadata.targetClients;
-}
+// export async function generateMetadata() {
+//   const metadata = await generateSEO();
+//   return metadata.targetClients;
+// }
 const TargetClient = () => {
   return (
     <div className="py-16 px-4 max-w-6xl mx-auto">

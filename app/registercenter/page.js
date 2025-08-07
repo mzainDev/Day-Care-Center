@@ -22,13 +22,13 @@ import {
   Hash
 } from 'lucide-react';
 
-import { generateMetadata as generateSEO } from "../components/Meta"; 
+// import { generateMetadata as generateSEO } from "../components/Meta"; 
 
 
-export async function generateMetadata() {
-  const metadata = await generateSEO();
-  return metadata.registercenter;
-}
+// export async function generateMetadata() {
+//   const metadata = await generateSEO();
+//   return metadata.registercenter;
+// }
 
 const validationSchema = Yup.object({
   name: Yup.string().required('Center Name is required'),
@@ -325,7 +325,7 @@ const RegisterCenter = () => {
                   <div>
                     <label htmlFor="centerManager" className="block text-gray-700 font-medium mb-2">
                       <Users className="inline w-4 h-4 mr-2" />
-                     Name of Center Manager <span className="text-red-500">*</span>
+                      Name of Center Manager <span className="text-red-500">*</span>
                     </label>
                     <Field
                       name="centerManager"
