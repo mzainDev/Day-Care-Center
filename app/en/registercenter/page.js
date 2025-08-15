@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import ReCAPTCHA from 'react-google-recaptcha';
-import ContactCard from '@/components/ContactCard';
-import FaqSection from '@/components/FaqSection';
+import ContactCard from '@/app/en/components/ContactCard';
+import FaqSection from '@/app/en/components/FaqSection';
 import Swal from 'sweetalert2';
 import {
   Building2,

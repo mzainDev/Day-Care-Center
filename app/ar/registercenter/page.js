@@ -4,8 +4,8 @@ import { useEffect } from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import ReCAPTCHA from 'react-google-recaptcha';
-import ContactCard from '@/components/ContactCard';
-import FaqSection from '@/components/FaqSection';
+import FaqSection from '@/app/ar/components/FaqSection';
+import ContactCard from '@/app/ar/components/ContactCard';
 import Swal from 'sweetalert2';
 import {
   Building2,
@@ -21,6 +21,7 @@ import {
   MapPinned,
   Hash
 } from 'lucide-react';
+import ContactCards from '../components/ContactCards';
 
 const validationSchema = Yup.object({
   name: Yup.string().required('اسم المركز مطلوب'),
@@ -442,7 +443,7 @@ const RegisterCenter = () => {
       </section>
 
       <section className="bg-white py-2 px-6">
-        <ContactCard />
+        <ContactCard/>
         <div className="mt-10">
           <FaqSection />
         </div>
