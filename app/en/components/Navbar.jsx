@@ -3,12 +3,14 @@ import { useState, useEffect } from 'react';
 import { ChevronDown, Phone, ArrowRight, Menu, X, ArrowUp } from 'lucide-react';
 import ExportedImage from "next-image-export-optimizer";
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
-  // Scroll visibility logic (unchanged)
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
@@ -21,7 +23,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  // Scroll to top (unchanged)
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -29,14 +30,18 @@ export default function Navbar() {
     });
   };
 
+  const switchToArabic = () => {
+    const newPath = pathname.replace('/en', '/ar');
+    router.push(newPath || '/ar');
+  };
+
   return (
     <>
       <nav className="bg-white px-6 py-4 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          {/* Logo - Added subtle scale + glow */}
           <div className="flex items-center">
             <Link 
-              href="/en" 
+              href="/en/" 
               className="transition-all duration-300 hover:scale-[1.02] hover:drop-shadow-[0_2px_5px_rgba(95,228,228,0.3)]"
             >
               <ExportedImage
@@ -50,7 +55,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button - Added pulse effect */}
           <button
             className="md:hidden flex items-center p-1 rounded-full hover:bg-gray-100/50 transition-all duration-300 group"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -62,41 +66,30 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Desktop Nav Links - Enhanced hover */}
           <div className="hidden md:flex items-center justify-between w-full pl-10">
             <div className="flex space-x-8 text-[#0f2c4f] font-medium">
-              <Link 
-                href="/en/features" 
-                className="relative py-2 group"
-              >
+              <Link href="/en/features" className="relative py-2 group">
                 <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
                   Features
                 </span>
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
               </Link>
-              {/* Repeat for other links */}
-              <Link 
-                href="/en/targetclients" 
-                className="relative py-2 group"
-              >
+
+              <Link href="/en/targetclients" className="relative py-2 group">
                 <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
                   Target Clients
                 </span>
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
               </Link>
-              <Link 
-                href="/en/contact" 
-                className="relative py-2 group"
-              >
+
+              <Link href="/en/contact" className="relative py-2 group">
                 <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
                   Contact Us
                 </span>
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
               </Link>
-              <Link 
-                href="/en/registercenter" 
-                className="relative py-2 group"
-              >
+
+              <Link href="/en/registercenter" className="relative py-2 group">
                 <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
                   Register Your Center
                 </span>
@@ -104,8 +97,14 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* CTA Button - Enhanced 3D effect */}
             <div className="flex items-center space-x-6">
+              <button 
+                onClick={switchToArabic}
+                className="text-[#0f2c4f] hover:text-[#1f8282] font-medium transition-all duration-300"
+              >
+                العربية
+              </button>
+              
               <a
                 href="tel:5168427339"
                 className="flex items-center text-[#5fe4e4] hover:text-[#1f8282] transition-all duration-300 group"
@@ -117,54 +116,39 @@ export default function Navbar() {
                 </span>
               </a>
               <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-2 rounded-full flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform hover:scale-105 group">
-                <span>Book demo</span>
+                <span>Book a Demo</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
             </div>
           </div>
 
-          {/* Mobile Menu - Enhanced hover */}
           {isMenuOpen && (
             <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-6 z-40 border-t">
               <div className="flex flex-col space-y-4">
-                <Link
-                  href="/en/features"
-                  className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <Link href="/en/features" className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg" onClick={() => setIsMenuOpen(false)}>
                   Features
                 </Link>
-                {/* Repeat for other mobile links */}
-                <Link
-                  href="/en/targetclients"
-                  className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <Link href="/en/targetclients" className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg" onClick={() => setIsMenuOpen(false)}>
                   Target Clients
                 </Link>
-                <Link
-                  href="/en/contact"
-                  className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <Link href="/en/contact" className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg" onClick={() => setIsMenuOpen(false)}>
                   Contact Us
                 </Link>
-                <Link
-                  href="/en/registercenter"
-                  className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                <Link href="/en/registercenter" className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg" onClick={() => setIsMenuOpen(false)}>
                   Register Your Center
                 </Link>
-                <a
-                  href="tel:5168427339"
-                  className="flex items-center py-3 px-4 text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
+                <button 
+                  onClick={switchToArabic}
+                  className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg text-right"
                 >
+                  العربية
+                </button>
+                <a href="tel:5168427339" className="flex items-center py-3 px-4 text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg">
                   <Phone className="w-4 h-4 mr-2" />
                   (516) 842-7339
                 </a>
                 <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-3 rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform hover:scale-105">
-                  Book demo <ArrowRight className="w-4 h-4" />
+                  Book a Demo <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -172,9 +156,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Sticky Buttons - Enhanced interactions */}
       <div className="fixed left-4 bottom-4 z-40 flex flex-col gap-3">
-        {/* WhatsApp - Floating bubble effect */}
         <a
           href="https://wa.me/15168427339"
           target="_blank"
@@ -187,19 +169,17 @@ export default function Navbar() {
           </svg>
         </a>
 
-        {/* Go to Top - Smooth fade in/out */}
         {isVisible && (
           <button
             onClick={scrollToTop}
             className="w-12 h-12 bg-[#5fe4e4] hover:bg-[#1f8282] rounded-full flex items-center justify-center text-white shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl"
-            aria-label="Go to top"
+            aria-label="Back to top"
           >
             <ArrowUp className="w-5 h-5" />
           </button>
         )}
       </div>
 
-      {/* Add custom animation keyframes */}
       <style jsx global>{`
         @keyframes float {
           0%, 100% { transform: translateY(0) scale(1); }
