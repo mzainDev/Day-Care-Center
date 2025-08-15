@@ -36,7 +36,7 @@ export default function Navbar() {
           {/* Logo - Added subtle scale + glow */}
           <div className="flex items-center">
             <Link 
-              href="/" 
+              href="/en" 
               className="transition-all duration-300 hover:scale-[1.02] hover:drop-shadow-[0_2px_5px_rgba(95,228,228,0.3)]"
             >
               <ExportedImage
@@ -66,7 +66,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center justify-between w-full pl-10">
             <div className="flex space-x-8 text-[#0f2c4f] font-medium">
               <Link 
-                href="/features" 
+                href="/en/features" 
                 className="relative py-2 group"
               >
                 <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
@@ -76,7 +76,7 @@ export default function Navbar() {
               </Link>
               {/* Repeat for other links */}
               <Link 
-                href="/targetclients" 
+                href="/en/targetclients" 
                 className="relative py-2 group"
               >
                 <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
@@ -85,7 +85,7 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
               </Link>
               <Link 
-                href="/contact" 
+                href="/en/contact" 
                 className="relative py-2 group"
               >
                 <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
@@ -94,7 +94,7 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
               </Link>
               <Link 
-                href="/registercenter" 
+                href="/en/registercenter" 
                 className="relative py-2 group"
               >
                 <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
@@ -128,7 +128,7 @@ export default function Navbar() {
             <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-6 z-40 border-t">
               <div className="flex flex-col space-y-4">
                 <Link
-                  href="/features"
+                  href="/en/features"
                   className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -136,21 +136,21 @@ export default function Navbar() {
                 </Link>
                 {/* Repeat for other mobile links */}
                 <Link
-                  href="/targetclients"
+                  href="/en/targetclients"
                   className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Target Clients
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/en/contact"
                   className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact Us
                 </Link>
                 <Link
-                  href="/registercenter"
+                  href="/en/registercenter"
                   className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
