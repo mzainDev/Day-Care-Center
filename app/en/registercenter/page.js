@@ -149,7 +149,7 @@ const RegisterCenter = () => {
   };
 
   return (
-    <>
+    <div dir="ltr" className="text-left">
       <header className="py-8 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-[#5fe4e9] mb-2">
           Register Your Childcare Center
@@ -489,7 +489,7 @@ const RegisterCenter = () => {
           <FaqSection />
         </div>
       </section>
-    </>
+    </div>
   );
 };
 
