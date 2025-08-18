@@ -1,15 +1,29 @@
 "use client";
-import { useState, useEffect } from 'react';
-import { ChevronDown, Phone, ArrowRight, Menu, X, ArrowUp, Languages } from 'lucide-react';
+import { useState, useEffect } from "react";
+import {
+  ChevronDown,
+  Phone,
+  ArrowRight,
+  Menu,
+  X,
+  ArrowUp,
+  Languages,
+} from "lucide-react";
 import ExportedImage from "next-image-export-optimizer";
-import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
+import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
+
+  // Detect current locale
+  const currentLocale = pathname.startsWith("/ar") ? "ar" : "en";
+
+  // Helper function to build links
+  const buildLink = (path) => `/${currentLocale}${path}`;
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -19,29 +33,65 @@ export default function Navbar() {
         setIsVisible(false);
       }
     };
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
-  const switchToArabic = () => {
-    const newPath = pathname.replace('/en', '/ar');
-    router.push(newPath || '/ar');
+  const switchLocale = () => {
+    if (currentLocale === "en") {
+      router.push(pathname.replace("/en", "/ar"));
+    } else {
+      router.push(pathname.replace("/ar", "/en"));
+    }
   };
 
   return (
     <>
       <nav className="bg-white px-6 py-4 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center">
-            <Link 
-              href="/en/" 
+          {/* Left Side: Links */}
+          <div className="hidden md:flex items-center space-x-8 text-[#0f2c4f] font-medium">
+            <Link href={buildLink("/features")} className="relative py-2 group">
+              <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
+                Features
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
+            </Link>
+            <Link href={buildLink("/targetclients")} className="relative py-2 group">
+              <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
+                Target Clients
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
+            </Link>
+            <Link href={buildLink("/contact")} className="relative py-2 group">
+              <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
+                Contact Us
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
+            </Link>
+            <Link href={buildLink("/registercenter")} className="relative py-2 group">
+              <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
+                Register Your Center
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
+            </Link>
+          </div>
+
+          {/* Right Side: Logo + Actions */}
+          <div className="flex items-center space-x-6">
+            {/* Language switch */}
+            
+
+            {/* Logo */}
+            <Link
+              href={`/${currentLocale}`}
               className="transition-all duration-300 hover:scale-[1.02] hover:drop-shadow-[0_2px_5px_rgba(95,228,228,0.3)]"
             >
               <ExportedImage
@@ -55,6 +105,7 @@ export default function Navbar() {
             </Link>
           </div>
 
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden flex items-center p-1 rounded-full hover:bg-gray-100/50 transition-all duration-300 group"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -65,118 +116,64 @@ export default function Navbar() {
               <Menu className="h-6 w-6 text-[#0f2c4f] group-hover:rotate-90 transition-transform duration-300" />
             )}
           </button>
+        </div>
 
-          <div className="hidden md:flex items-center justify-between w-full pl-10">
-            <div className="flex space-x-8 text-[#0f2c4f] font-medium">
-              <Link href="/en/features" className="relative py-2 group">
-                <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
-                  Features
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-6 z-40 border-t">
+            <div className="flex flex-col space-y-4">
+              <Link
+                href={buildLink("/features")}
+                className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Features
               </Link>
-
-              <Link href="/en/targetclients" className="relative py-2 group">
-                <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
-                  Target Clients
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
+              <Link
+                href={buildLink("/targetclients")}
+                className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Target Clients
               </Link>
-
-              <Link href="/en/contact" className="relative py-2 group">
-                <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
-                  Contact Us
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
+              <Link
+                href={buildLink("/contact")}
+                className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
               </Link>
-
-              <Link href="/en/registercenter" className="relative py-2 group">
-                <span className="relative z-10 transition-all duration-300 group-hover:text-[#1f8282]">
-                  Register Your Center
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5fe4e4] origin-left transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"></span>
+              <Link
+                href={buildLink("/registercenter")}
+                className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Register Your Center
               </Link>
-            </div>
-
-            <div className="flex items-center space-x-6">
+              <button
+                onClick={switchLocale}
+                className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg flex items-center gap-2"
+              >
+                <Languages className="w-4 h-4" />
+                {currentLocale === "en" ? "العربية" : "English"}
+              </button>
               <a
                 href="tel:5168427339"
-                className="flex items-center text-[#5fe4e4] hover:text-[#1f8282] transition-all duration-300 group"
+                className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg flex items-center gap-2"
               >
-                
-                <span className="relative">
-                  (516) 842-7339
-                  
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#1f8282] group-hover:w-full transition-all duration-300"></span>
-                  
-                </span>
-                <Phone className="w-4 h-4 mr-1 group-hover:animate-pulse" />
+                <Phone className="w-4 h-4" />
+                (516) 842-7339
               </a>
-              
-              <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-2 rounded-full flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform hover:scale-105 group">
-                <span>Book a Demo</span>
-                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
-              <button 
-                onClick={switchToArabic}
-                className="relative overflow-hidden bg-white border border-[#5fe4e4] text-[#0f2c4f] font-medium px-4 py-2 rounded-full flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform hover:scale-105 group"
-              >
-                <span className="relative z-10 flex items-center gap-2">
-                  <Languages className="w-4 h-4" />
-                  <span>العربية</span>
-                </span>
-                <span className="absolute bottom-0 left-0 w-full h-0 bg-[#5fe4e4] group-hover:h-full transition-all duration-300 ease-in-out z-0"></span>
+              <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-3 rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform hover:scale-105">
+                Book a Demo <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
-
-          {isMenuOpen && (
-            <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-6 z-40 border-t">
-              <div className="flex flex-col space-y-4">
-                <Link href="/en/features" className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg" onClick={() => setIsMenuOpen(false)}>
-                  Features
-                </Link>
-                <Link href="/en/targetclients" className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg" onClick={() => setIsMenuOpen(false)}>
-                  Target Clients
-                </Link>
-                <Link href="/en/contact" className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg" onClick={() => setIsMenuOpen(false)}>
-                  Contact Us
-                </Link>
-                <Link href="/en/registercenter" className="py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg" onClick={() => setIsMenuOpen(false)}>
-                  Register Your Center
-                </Link>
-                <button 
-                  onClick={switchToArabic}
-                  className="relative overflow-hidden py-3 px-4 font-medium text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg flex items-center justify-start gap-2"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    <Languages className="w-4 h-4" />
-                    العربية
-                  </span>
-                  <span className="absolute bottom-0 left-0 w-full h-0 bg-[#5fe4e4] hover:h-full transition-all duration-300 ease-in-out z-0"></span>
-                </button>
-                <a
-                href="tel:5168427339"
-                className="flex items-center text-[#5fe4e4] hover:text-[#1f8282] transition-all duration-300 group"
-              >
-                
-                <span className="relative">
-                  (516) 842-7339
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#1f8282] group-hover:w-full transition-all duration-300"></span>
-                </span>
-                <Phone className="w-4 h-4 mr-1 group-hover:animate-pulse" />
-              </a>
-                <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-3 rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform hover:scale-105">
-                  Book a Demo <ArrowRight className="w-4 h-4" />
-                </button>
-                
-                
-              </div>
-            </div>
-          )}
-        </div>
+        )}
       </nav>
 
-     <div className="fixed right-4 bottom-4 z-40 flex flex-col gap-3">
+      {/* Floating Buttons */}
+      <div className="fixed right-4 bottom-4 z-40 flex flex-col gap-3">
   {/* Call Button - Light Blue */}
   <a
     href="tel:5168427339"
@@ -214,8 +211,13 @@ export default function Navbar() {
 
       <style jsx global>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0) scale(1); }
-          50% { transform: translateY(-8px) scale(1.02); }
+          0%,
+          100% {
+            transform: translateY(0) scale(1);
+          }
+          50% {
+            transform: translateY(-8px) scale(1.02);
+          }
         }
       `}</style>
     </>
