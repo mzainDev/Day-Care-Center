@@ -1,7 +1,7 @@
 "use client";
 
 import ExportedImage from "next-image-export-optimizer";
-import autoReminder from "../../public/image/autoReminder.png";
+import autoReminder from "@/public/image/autoReminder.png";
 import { Bell, FileText, Compass } from "lucide-react";
 
 const reminders = [

@@ -14,13 +14,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ar" dir="rtl">
-      <body className="antialiased">
-        <TopBar />
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <TopBar />
+      <Navbar />
+      {children}
+      <Footer />
+    </>
   );
 }
