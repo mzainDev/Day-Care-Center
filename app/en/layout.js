@@ -8,12 +8,12 @@ export const metadata = {
   description:
     "Rawdhat offers comprehensive childcare management solutions that simplify operations and enhance the experience for families and teachers alike.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "favicon.ico",
   },
 };
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <>
       <TopBar />
