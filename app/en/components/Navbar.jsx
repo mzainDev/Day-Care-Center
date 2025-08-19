@@ -104,20 +104,31 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Language switch */}
-            <button
-              onClick={switchLocale}
-              className="relative overflow-hidden bg-white border border-[#5fe4e4] text-[#0f2c4f] font-medium px-5 py-2.5 rounded-full flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform hover:scale-105 group"
-            >
-              {/* Text + Icon Layer */}
-              <span className="relative z-10 flex items-center gap-2">
-                <Languages className="w-4 h-4" />
-                <span>{currentLocale === "en" ? "العربية" : "English"}</span>
-              </span>
+            <div className="hidden md:flex gap-2">
+              <a href="tel:5168427339" className="flex items-center py-3 px-4 text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg">
 
-              {/* Hover Background Fill */}
-              <span className="absolute bottom-0 left-0 w-full h-0 bg-[#5fe4e4] group-hover:h-full transition-all duration-300 ease-in-out z-0"></span>
-            </button>
+                (516) 842-7339
+                <Phone className="w-4 h-4 mr-2" />
+              </a>
+              <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-3 rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform hover:scale-105">
+                احجز عرضاً توضيحياً <ArrowRight className="w-4 h-4" />
+              </button>
+              {/* Language switch */}
+              <button
+                onClick={switchLocale}
+                className="relative overflow-hidden bg-white border border-[#5fe4e4] text-[#0f2c4f] font-medium px-5 py-2.5 rounded-full flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform hover:scale-105 group"
+              >
+                {/* Text + Icon Layer */}
+                <span className="relative z-10 flex items-center gap-2">
+                  <Languages className="w-4 h-4" />
+                  <span>{currentLocale === "en" ? "العربية" : "English"}</span>
+                </span>
+
+                {/* Hover Background Fill */}
+                <span className="absolute bottom-0 left-0 w-full h-0 bg-[#5fe4e4] group-hover:h-full transition-all duration-300 ease-in-out z-0"></span>
+              </button>
+            </div>
+
           </div>
 
           {/* Mobile Menu Button */}

@@ -100,7 +100,7 @@ const TrustedConnection = () => {
             <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50" id="integrations">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-12 animate-fade-in">
-                        <h2 className="text-4xl font-bold text-gray-800 mb-4 relative inline-block">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-4 relative inline-block">
                             Seamless Integrations & Trusted Connections
                         </h2>
                         <p className="text-gray-600 text-lg max-w-3xl mx-auto">
