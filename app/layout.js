@@ -2,6 +2,8 @@
 import "./globals.css";
 
 export const metadata = {
+
+
   title: "Rawdhat Portal Website",
   description: "Rawdhat offers childcare management solutions.",
   icons: {
@@ -14,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang="en" dir="ltr">
       <body className="antialiased">{children}</body>
     </html>
   );

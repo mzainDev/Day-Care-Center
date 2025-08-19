@@ -120,7 +120,7 @@ const TrustedConnection = () => {
                                         style={{ animationDelay: `${index * 100}ms` }}
                                     >
                                         <Card className="shadow-md hover:shadow-xl transition-all duration-300 bg-white border-0 overflow-hidden rounded-xl hover:-translate-y-2">
-                                            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-indigo-500 to-purple-600"></div>
+
                                             <CardHeader className="flex flex-row items-center gap-3 pb-2">
                                                 <div className="p-2 rounded-lg bg-gray-50">
                                                     {card.icon}
@@ -193,7 +193,7 @@ const TrustedConnection = () => {
                                         style={{ animationDelay: `${index * 100}ms` }}
                                     >
                                         <Card className="shadow-md hover:shadow-xl transition-all duration-300 bg-white border-0 overflow-hidden rounded-xl hover:-translate-y-2">
-                                            <div className="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-blue-500 to-teal-500"></div>
+
                                             <CardHeader className="flex flex-row items-center gap-3 pb-2">
                                                 <div className="p-2 rounded-lg bg-gray-50">
                                                     {card.icon}

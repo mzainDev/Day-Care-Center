@@ -5,48 +5,48 @@ import TrustedConnection from './TrustedConnection';
 
 
 const FeatureSec = () => {
-const features = [
-  {
-    title: "Streamlined Billing",
-    description: "Automatically generate invoices, process payments, and track expenses all in one place.",
-    icon: <DollarSign className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
-    bg: "bg-gradient-to-br from-blue-400 via-cyan-200 to-blue-200",
-  },
-  {
-    title: "Attendance Tracking",
-    description: "Digital check-in/out system with reporting to monitor attendance patterns and staff ratios.",
-    icon: <ClipboardList className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
-    bg: "bg-gradient-to-br from-purple-400 via-pink-300 to-pink-200",
-  },
-  {
-    title: "Parent Communication",
-    description: "Real-time updates, newsletters, and direct messaging to keep families informed.",
-    icon: <MessageCircle className="bg-white rounded-full p-1  w-8 h-8 text-[#5fe4e4]" />,
-    bg: "bg-gradient-to-br from-green-200 via-lime-300 to-green-200",
-  },
-  {
-    title: "Staff Management",
-    description: "Schedule staff, track certifications, and manage payroll efficiently.",
-    icon: <Users className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
-    bg: "bg-gradient-to-br from-yellow-300 via-orange-300 to-red-200",
-  },
-  {
-    title: "Documentation",
-    description: "Digitize all your paperwork and access important documents anytime, anywhere.",
-    icon: <FileText className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
-    bg: "bg-gradient-to-br from-indigo-400 via-violet-300 to-indigo-200",
-  },
-  {
-    title: "Reporting & Analytics",
-    description: "Generate insights on enrollment, revenue, staff performance and more.",
-    icon: <BarChart2 className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
-    bg: "bg-gradient-to-br from-pink-400 via-rose-300 to-pink-200",
-  },
-];
+    const features = [
+        {
+            title: "Streamlined Billing",
+            description: "Automatically generate invoices, process payments, and track expenses all in one place.",
+            icon: <DollarSign className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
+            bg: "bg-gradient-to-br from-blue-400 via-cyan-200 to-blue-200",
+        },
+        {
+            title: "Attendance Tracking",
+            description: "Digital check-in/out system with reporting to monitor attendance patterns and staff ratios.",
+            icon: <ClipboardList className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
+            bg: "bg-gradient-to-br from-purple-400 via-pink-300 to-pink-200",
+        },
+        {
+            title: "Parent Communication",
+            description: "Real-time updates, newsletters, and direct messaging to keep families informed.",
+            icon: <MessageCircle className="bg-white rounded-full p-1  w-8 h-8 text-[#5fe4e4]" />,
+            bg: "bg-gradient-to-br from-green-200 via-lime-300 to-green-200",
+        },
+        {
+            title: "Staff Management",
+            description: "Schedule staff, track certifications, and manage payroll efficiently.",
+            icon: <Users className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
+            bg: "bg-gradient-to-br from-yellow-300 via-orange-300 to-red-200",
+        },
+        {
+            title: "Documentation",
+            description: "Digitize all your paperwork and access important documents anytime, anywhere.",
+            icon: <FileText className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
+            bg: "bg-gradient-to-br from-indigo-400 via-violet-300 to-indigo-200",
+        },
+        {
+            title: "Reporting & Analytics",
+            description: "Generate insights on enrollment, revenue, staff performance and more.",
+            icon: <BarChart2 className="bg-white rounded-full p-1 w-8 h-8 text-[#5fe4e4]" />,
+            bg: "bg-gradient-to-br from-pink-400 via-rose-300 to-pink-200",
+        },
+    ];
     return (
         <>
             {/* TrustedConnection component is included here */}
-            <TrustedConnection />
+            <TrustedConnection />   
 
 
             <section className="py-20 px-6 bg-white">
