@@ -16,7 +16,6 @@ const IMAGES = {
     zatca: '/trusted-icons/zatca.ico',
 };
 const cards = [
-<<<<<<< HEAD
   {
     icon: <Fingerprint className="text-indigo-600 w-6 h-6" />,
     title: 'جهاز البصمة',
