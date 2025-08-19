@@ -5,9 +5,8 @@ import { useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
 
 export default function TopBar() {
-    const [isVisible, setIsVisible] = useState(true);
-
-    if (!isVisible) return null;
+    const [isVisible, setIsVisible] = useState(true); 
+        if (!isVisible) return null;
 
     return (
         <div className="bg-gradient-to-r from-[#fdd99e] to-[#ffd077] relative">

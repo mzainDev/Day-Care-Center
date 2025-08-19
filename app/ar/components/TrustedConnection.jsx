@@ -3,41 +3,46 @@ import React from 'react'
 import ExportedImage from 'next-image-export-optimizer'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
-    Fingerprint, MessageCircle, Globe, ClipboardList,
+    Fingerprint, MessageCircle, Globe, ClipboardList, Calendar,
 } from 'lucide-react';
 
 
 const IMAGES = {
-    integration: '/trusted-icons/integration.png',
-    paymentMethod: '/trusted-icons/paymentmethod.png',
+    integration: '/images/whatsapp.jpg',
+    paymentMethod: '/images/fatora.png',
     tap: '/trusted-icons/tap.ico',
     tabby: '/trusted-icons/tabby.ico',
     tamara: '/trusted-icons/tamara.ico',
     zatca: '/trusted-icons/zatca.ico',
 };
-
 const cards = [
-    {
-        icon: <Fingerprint className="text-indigo-600 w-6 h-6" />,
-        title: 'جهاز البصمة',
-        description: 'تتبع الحضور بشكل آمن ودقيق باستخدام تقنية البصمة الحيوية.',
-    },
-    {
-        icon: <MessageCircle className="text-green-600 w-6 h-6" />,
-        title: 'واجهة برمجة واتساب',
-        description: 'إرسال التنبيهات والتذكيرات تلقائيًا إلى أولياء الأمور والموظفين.',
-    },
-    {
-        icon: <Globe className="text-blue-600 w-6 h-6" />,
-        title: 'تكامل الموقع الإلكتروني',
-        description: 'ربط نماذج اتصل بنا، طلبات التوظيف، والمزيد.',
-    },
-    {
-        icon: <ClipboardList className="text-purple-600 w-6 h-6" />,
-        title: 'دعم صفحات الهبوط',
-        description: 'التقاط العملاء المحتملين وإرسال النماذج بسهولة من صفحاتك.',
-    },
+  {
+    icon: <Fingerprint className="text-indigo-600 w-6 h-6" />,
+    title: 'جهاز البصمة',
+    description: 'تتبع الحضور بشكل آمن ودقيق باستخدام تقنية البصمة الحيوية.',
+  },
+  {
+    icon: <MessageCircle className="text-green-600 w-6 h-6" />,
+    title: 'واجهة برمجة واتساب',
+    description: 'إرسال التنبيهات والتذكيرات تلقائيًا إلى أولياء الأمور والموظفين.',
+  },
+  {
+    icon: <Globe className="text-blue-600 w-6 h-6" />,
+    title: 'تكامل الموقع الإلكتروني',
+    description: 'ربط نماذج اتصل بنا، طلبات التوظيف، والمزيد.',
+  },
+  {
+    icon: <ClipboardList className="text-purple-600 w-6 h-6" />,
+    title: 'دعم صفحات الهبوط',
+    description: 'التقاط العملاء المحتملين وإرسال النماذج بسهولة من صفحاتك.',
+  },
+  {
+    icon: <Calendar className="text-red-600 w-6 h-6" />,
+    title: 'إدارة الجداول الزمنية',
+    description: 'تنظيم المواعيد والأنشطة بكفاءة مع نظام الجداول الذكية.',
+  },
 ];
+
 
 const paymentCards = [
     {
@@ -53,19 +58,7 @@ const paymentCards = [
         title: 'تاب للمدفوعات',
         description: 'قبول Apple Pay و Mada وبطاقات Visa — كلها في بوابة آمنة واحدة.',
     },
-    {
-        icon: (
-            <ExportedImage
-                src={IMAGES.tabby}
-                alt="أيقونة تابي"
-                width={48}
-                height={48}
-                className="w-12 h-12"
-            />
-        ),
-        title: 'تابي',
-        description: 'توفير خطط دفع شهرية مرنة للعائلات مع تكامل تابي.',
-    },
+    
     {
         icon: (
             <ExportedImage

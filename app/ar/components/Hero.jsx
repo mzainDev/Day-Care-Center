@@ -65,7 +65,7 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-500 rounded-xl blur-sm opacity-20 transform translate-y-2"></div>
                         <div className="relative bg-white p-2 sm:p-4 rounded-xl shadow-xl border border-gray-100 overflow-hidden">
                             <ExportedImage
-                                src="/logos/ss.png"
+                                src="/images/dashboard-ar.png"
                                 alt="صورة لبرنامج Playground"
                                 width={1200}
                                 height={800}
