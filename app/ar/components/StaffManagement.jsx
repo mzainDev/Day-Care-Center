@@ -12,7 +12,7 @@ const StaffManagement = () => {
           <div className="relative lg:w-[60%]">
             <div className="relative rounded-3xl overflow-hidden bg-white bg-opacity-30 backdrop-blur-md border border-blue-200/50 shadow-[0_25px_80px_rgba(92,225,230,0.3)] transition-transform duration-300 hover:scale-105">
               <ExportedImage
-                src="/features/featurespage1.JPG"
+                src="/features/featurespage-ar-1.png"
                 alt="إدارة الموظفين"
                 width={900}
                 height={950}

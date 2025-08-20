@@ -12,7 +12,7 @@ const GuardianDashboard = () => {
           <div className="relative lg:w-1/2">
             <div className="relative overflow-hidden rounded-3xl bg-white bg-opacity-30 backdrop-blur-md border border-purple-200/50 shadow-[0_25px_80px_rgba(168,85,247,0.25)] transition-transform duration-300 hover:scale-105">
               <ExportedImage
-                src="/features/featurespage8.JPG"
+                src="/features/features-ar-2.png"
                 alt="لوحة تحكم ولي الأمر"
                 width={720}
                 height={500}

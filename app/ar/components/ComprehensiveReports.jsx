@@ -12,7 +12,7 @@ const ComprehensiveReports = () => {
           <div className="relative lg:w-1/2">
             <div className="relative overflow-hidden rounded-3xl bg-white bg-opacity-30 backdrop-blur-md border border-blue-200/50 shadow-[0_25px_80px_rgba(59,130,246,0.25)] transition-transform duration-300 hover:scale-105">
               <ExportedImage
-                src="/features/comprehensiveReports.jpg"
+                src="/features/comprehensiveReport.png"
                 alt="تقارير شاملة"
                 width={720}
                 height={500}

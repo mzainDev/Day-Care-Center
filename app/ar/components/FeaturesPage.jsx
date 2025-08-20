@@ -11,19 +11,19 @@ const FeaturesPage = () => {
 
   const dashboardSlides = [
     {
-      src: "/admin-dashboard-section/admin-dashboard-1.JPG",
+      src: "/admin-dashboard-ar/dashboard-ar-1.png",
       alt: "نظرة عامة على لوحة التحكم",
     },
     {
-      src: "/admin-dashboard-section/admin-dashboard-2.JPG",
+      src: "/admin-dashboard-ar/dashboard-ar-2.png",
       alt: "ذكاء الموظفين",
     },
     {
-      src: "/admin-dashboard-section/admin-dashboard-3.JPG",
+      src: "/admin-dashboard-ar/dashboard-ar-3.png",
       alt: "نظام العملاء المحتملين",
     },
     {
-      src: "/admin-dashboard-section/admin-dashboard-4.JPG",
+      src: "/admin-dashboard-ar/dashboard-ar-4.jpg",
       alt: "رؤى تنفيذية",
     }
   ];

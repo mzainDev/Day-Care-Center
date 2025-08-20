@@ -2,7 +2,9 @@
 
 import ExportedImage from 'next-image-export-optimizer';
 import { CheckCircle } from 'lucide-react';
-import portalSetting from '@/public/image/portalSetting.png'; // Replace with your actual image
+import portalSetting from '@/public/images/portalSetting.png'; // Replace with your actual image
+
+
 
 const settings = [
   {
