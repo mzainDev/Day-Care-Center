@@ -25,7 +25,7 @@ const FeaturePreview = () => {
     {
       title: "Enrollment",
       description: "Digital registration with automated paperwork",
-      image: "/ss/Staff Info.JPG",
+      image: "/ss/Enrollment.JPG",
       colSpan: "lg:col-span-2",
       color: "from-teal-500 to-emerald-600",
     },
