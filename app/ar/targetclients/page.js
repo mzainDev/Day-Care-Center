@@ -4,9 +4,9 @@ import ExportedImage from 'next-image-export-optimizer'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-import targetClients1 from '@/public/image/targetClients1.jpg';
-import targetClients2 from '@/public/image/targetClients2.jpg';
-import targetClients3 from '@/public/image/targetClients3.jpg';
+import targetClients1 from '@/public/images/targetClients1.jpg';
+import targetClients2 from '@/public/images/targetClients2.jpg';
+import targetClients3 from '@/public/images/targetClients3.jpg';
 
 const sections = [
   {
