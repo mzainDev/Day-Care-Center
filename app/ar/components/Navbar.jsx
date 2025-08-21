@@ -106,9 +106,9 @@ export default function Navbar() {
 
                 <span className="relative">
                   (516) 842-7339
-                  <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#1f8282] group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute-bottom-1 left-0 w-0 h-px bg-[#1f8282] group-hover:w-full transition-all duration-300"></span>
                 </span>
-                <Phone className="w-4 h-4 mr-1 group-hover:animate-pulse" />
+                <Phone className="w-4 h-4 mr-1 group-hover:animate-pulse ml-1" />
               </a>
               <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-2 rounded-full flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 transform hover:scale-105 group">
                 <span>احجز عرضاً توضيحياً</span>
