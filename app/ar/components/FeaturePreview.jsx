@@ -25,7 +25,7 @@ const FeaturePreview = () => {
     {
       title: "التسجيل",
       description: "تسجيل رقمي مع إتمام المستندات تلقائيًا",
-      image: "images/info.png",
+      image: "images/tasjeel.jpg",
       colSpan: "lg:col-span-2",
       color: "from-teal-500 to-emerald-600",
     },

@@ -106,12 +106,12 @@ export default function Navbar() {
 
             <div className="hidden md:flex gap-2">
               <a href="tel:5168427339" className="flex items-center py-3 px-4 text-[#1f8282] hover:pl-6 transition-all duration-300 hover:bg-[#f0fdfd] rounded-lg">
-
-                (516) 842-7339
                 <Phone className="w-4 h-4 mr-2 ml-1" />
+                (516) 842-7339
+                
               </a>
               <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-3 rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform hover:scale-105">
-                احجز عرضاً توضيحياً <ArrowRight className="w-4 h-4" />
+                Book a Demo<ArrowRight className="w-4 h-4" />
               </button>
               {/* Language switch */}
               <button
@@ -189,6 +189,7 @@ export default function Navbar() {
               >
                 <Phone className="w-4 h-4" />
                 (516) 842-7339
+                
               </a>
               <button className="bg-[#5fe4e4] hover:bg-[#1f8282] text-white font-medium px-4 py-3 rounded-full flex items-center justify-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform hover:scale-105">
                 Book a Demo <ArrowRight className="w-4 h-4" />
