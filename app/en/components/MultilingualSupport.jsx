@@ -1,5 +1,5 @@
 'use client'
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from 'next/link';
 import { Globe, RefreshCw, Smartphone, Users } from 'lucide-react';
 
@@ -11,7 +11,7 @@ const MultilingualSupport = () => {
           {/* Image - Right */}
           <div className="relative lg:w-1/2">
             <div className="relative overflow-hidden rounded-3xl bg-white bg-opacity-30 backdrop-blur-md border border-indigo-200/50 shadow-[0_25px_80px_rgba(99,102,241,0.25)] transition-transform duration-300 hover:scale-105">
-              <ExportedImage
+              <Image
                 src="/features/multilingualSupport.jpg"
                 alt="Multilingual Support"
                 width={720}

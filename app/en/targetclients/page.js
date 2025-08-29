@@ -1,8 +1,8 @@
 'use client'
 
-import ExportedImage from 'next-image-export-optimizer'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 import targetClients1 from '@/public/image/targetClients1.jpg';
@@ -84,7 +84,7 @@ const TargetClient = () => {
               className="w-full max-w-4xl mx-auto bg-white shadow-md border border-gray-200 rounded-lg p-3"
             >
               <div className="overflow-hidden rounded-md">
-                <ExportedImage
+                <Image
                   src={section.image}
                   alt={section.title}
                   width={800}

@@ -1,6 +1,6 @@
 'use client';
 
-import ExportedImage from 'next-image-export-optimizer';
+import Image from "next/image";
 import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
 
@@ -126,7 +126,7 @@ const FeaturePreview = () => {
 
                 {/* الصورة */}
                 <div className="w-full mt-auto">
-                  <ExportedImage
+                  <Image
                     src={feature.image}
                     alt={`روضتنا - ${feature.title}`}
                     width={600}

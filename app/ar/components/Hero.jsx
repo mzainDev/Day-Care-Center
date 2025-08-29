@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import ExportedImage from 'next-image-export-optimizer';
+import Image from "next/image";
 import { ArrowRight, DollarSign, CalendarCheck, ClipboardList, MessageSquare, FileText, CreditCard } from 'lucide-react';
 
 const Hero = () => {
@@ -64,7 +64,7 @@ const Hero = () => {
                     <div className="relative w-full max-w-5xl mx-auto">
                         <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-500 rounded-xl blur-sm opacity-20 transform translate-y-2"></div>
                         <div className="relative bg-white p-2 sm:p-4 rounded-xl shadow-xl border border-gray-100 overflow-hidden">
-                            <ExportedImage
+                            <Image
                                 src="/images/dashboard-ar.png"
                                 alt="صورة لبرنامج Playground"
                                 width={1200}

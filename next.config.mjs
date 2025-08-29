@@ -2,7 +2,14 @@
 const nextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, // ⛔ disables built-in optimization
+    loader: 'default',
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
 };
 

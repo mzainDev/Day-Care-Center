@@ -1,5 +1,5 @@
 'use client'
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from 'next/link';
 import { Calendar, Tag, FileText, Users } from 'lucide-react';
 
@@ -11,7 +11,7 @@ const SubscriptionPlans = () => {
           {/* Image - Left */}
           <div className="relative lg:w-1/2">
             <div className="relative overflow-hidden rounded-3xl bg-white bg-opacity-30 backdrop-blur-md border border-teal-200/50 shadow-[0_25px_80px_rgba(13,148,136,0.25)] transition-transform duration-300 hover:scale-105">
-              <ExportedImage
+              <Image
                 src="/features/subscriptionPlans.jpg"
                 alt="Subscription Plans"
                 width={720}

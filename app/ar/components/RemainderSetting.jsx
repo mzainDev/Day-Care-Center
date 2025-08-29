@@ -1,6 +1,6 @@
 "use client";
 
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next/image";
 import autoReminder from "@/public/images/autoReminder.png";
 import { Bell, FileText, Compass } from "lucide-react";
 
@@ -56,7 +56,7 @@ export default function AutoReminderSettings() {
           {/* الصورة */}
           <div className="w-full h-full">
             <div className="h-full rounded-3xl overflow-hidden border border-gray-200 shadow-[0_10px_30px_rgba(255,0,150,0.4),_0_5px_15px_rgba(0,205,255,0.3)] transition duration-300 hover:scale-[1.02]">
-              <ExportedImage
+              <Image
                 src={autoReminder}
                 alt="واجهة إعدادات التذكير التلقائي"
                 width={800}

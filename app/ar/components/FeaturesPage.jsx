@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next/image";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
 
@@ -98,7 +98,7 @@ const FeaturesPage = () => {
                 className="absolute inset-0"
               >
                 <div className="relative w-full h-full">
-                  <ExportedImage
+                  <Image
                     src={dashboardSlides[activeSlide].src}
                     alt={dashboardSlides[activeSlide].alt}
                     fill

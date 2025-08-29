@@ -1,6 +1,6 @@
 'use client';
 
-import ExportedImage from 'next-image-export-optimizer';
+import Image from "next/image";
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Slider from 'react-slick';
@@ -68,7 +68,7 @@ const TrustedPartner = () => {
                   whileHover={{ scale: 1.05 }}
                   className="partner-item bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center h-32"
                 >
-                  <ExportedImage
+                  <Image
                     src={partner.logo}
                     alt={partner.alt}
                     width={170}

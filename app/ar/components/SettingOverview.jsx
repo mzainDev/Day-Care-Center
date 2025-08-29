@@ -1,6 +1,6 @@
 'use client';
 
-import ExportedImage from 'next-image-export-optimizer';
+import Image from "next/image";
 import { CheckCircle } from 'lucide-react';
 import portalSetting from '@/public/images/portalSetting.png'; // Replace with your actual image
 
@@ -59,7 +59,7 @@ export default function SettingOverview() {
           {/* اليسار: صورة */}
           <div className="w-full h-full">
             <div className="h-full rounded-3xl overflow-hidden border border-gray-200 shadow-[0_10px_30px_rgba(59,130,246,0.4)] transition duration-300 hover:scale-[1.02]">
-              <ExportedImage
+              <Image
                 src={portalSetting}
                 alt="واجهة إعدادات البوابة"
                 width={800}

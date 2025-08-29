@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'
-import ExportedImage from 'next-image-export-optimizer';
+import Image from "next/image";
 import Link from 'next/link';
 import { Instagram, Twitter, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -14,7 +14,7 @@ const Footer = () => {
                     <div className="space-y-6">
                         <div className="bg-white p-2 rounded-md w-[160px] h-[50px]">
                             <Link href="/">
-                                <ExportedImage
+                                <Image
                                     src="/logos/logo.png"
                                     alt="Rawdhat Logo"
                                     width={160}

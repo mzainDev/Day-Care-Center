@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import ExportedImage from 'next-image-export-optimizer'
+import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
     Fingerprint, MessageCircle, Globe, ClipboardList,
@@ -42,7 +42,7 @@ const cards = [
 const paymentCards = [
     {
         icon: (
-            <ExportedImage
+            <Image
                 src={IMAGES.tap}
                 alt="Tap Icon"
                 width={48}
@@ -55,7 +55,7 @@ const paymentCards = [
     },
     {
         icon: (
-            <ExportedImage
+            <Image
                 src={IMAGES.tabby}
                 alt="Tabby Icon"
                 width={48}
@@ -68,7 +68,7 @@ const paymentCards = [
     },
     {
         icon: (
-            <ExportedImage
+            <Image
                 src={IMAGES.tamara}
                 alt="Tamara Icon"
                 width={48}
@@ -81,7 +81,7 @@ const paymentCards = [
     },
     {
         icon: (
-            <ExportedImage
+            <Image
                 src={IMAGES.zatca}
                 alt="Saudi Pay Icon"
                 width={48}
@@ -142,7 +142,7 @@ const TrustedConnection = () => {
                         <div className="flex-1 flex justify-center animate-fade-in-delayed">
                             <div className="relative">
                                 <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur-lg opacity-30"></div>
-                                <ExportedImage
+                                <Image
                                     src={IMAGES.integration}
                                     alt="Integration Screenshot"
                                     width={400}
@@ -173,7 +173,7 @@ const TrustedConnection = () => {
                         <div className="flex-1 animate-fade-in-delayed">
                             <div className="relative">
                                 <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl blur-lg opacity-30"></div>
-                                <ExportedImage
+                                <Image
                                     src={IMAGES.paymentMethod}
                                     alt="Payment Screenshot"
                                     width={600}

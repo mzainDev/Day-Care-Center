@@ -1,5 +1,5 @@
 'use client'
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from 'next/link';
 import { Users, Calendar, BarChart2, Key } from 'lucide-react';
 
@@ -11,7 +11,7 @@ const StaffManagement = () => {
           {/* Image - Left */}
           <div className="relative lg:w-[60%]">
             <div className="relative rounded-3xl overflow-hidden bg-white bg-opacity-30 backdrop-blur-md border border-blue-200/50 shadow-[0_25px_80px_rgba(92,225,230,0.3)] transition-transform duration-300 hover:scale-105">
-              <ExportedImage
+              <Image
                 src="/features/featurespage-ar-1.png"
                 alt="إدارة الموظفين"
                 width={900}

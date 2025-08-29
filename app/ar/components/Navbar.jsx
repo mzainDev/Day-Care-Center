@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import { ChevronDown, Phone, ArrowRight, Menu, X, ArrowUp, Languages } from 'lucide-react';
-import ExportedImage from "next-image-export-optimizer";
+import Image from "next/image";
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 
@@ -44,7 +44,7 @@ export default function Navbar() {
               href="/ar/"
               className="transition-all duration-300 hover:scale-[1.02] hover:drop-shadow-[0_2px_5px_rgba(95,228,228,0.3)]"
             >
-              <ExportedImage
+              <Image
                 src="/logos/1.png"
                 alt="الشعار"
                 width={160}
